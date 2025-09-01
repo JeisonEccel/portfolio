@@ -1,3 +1,3 @@
-export default function Home() {
-  return <>Jeison Eccel</>
+export default function Page() {
+  return <p>Portfolio page</p>
 }
