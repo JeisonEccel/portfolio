@@ -1,3 +1,9 @@
+import Introduction from "./(sections)/Introduction"
+
 export default function Page() {
-  return <p>Portfolio page</p>
+  return (
+    <>
+      <Introduction />
+    </>
+  )
 }
