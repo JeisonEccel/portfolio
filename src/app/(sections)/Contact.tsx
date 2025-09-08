@@ -46,7 +46,6 @@ export default function Contact() {
       <div className="flex gap-4">
         {links.map((link, index) => {
           const currentTheme = mounted ? resolvedTheme : "light"
-          console.log(currentTheme)
           const iconSrc =
             currentTheme === "dark"
               ? `/icons/dark/${link.icon}`
