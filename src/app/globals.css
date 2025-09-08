@@ -1,3 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "tailwindcss-animate";
+
+@theme {
+  /* Colors */
+  --color-darkest: hsl(33 98% 10%);
+  --color-darker: hsl(33 59% 20%);
+  --color-dark: hsl(32 40% 36%);
+  --color-medium-dark: hsl(33 29% 45%);
+  --color-medium: hsl(32 29% 60%);
+  --color-medium-light: hsl(32 41% 76%);
+  --color-light: hsl(32 100% 92%);
+  --color-lighter: hsl(33 100% 96%);
+  --color-lightest: hsl(36 100% 98%);
+
+  /* Fonts */
+  --font-sans: Helvetica, Arial, sans-serif;
+
+  /* Drop shadows */
+  --drop-shadow-dark: 0 2px 4px rgba(20, 20, 20, 0.5);
+  --drop-shadow-darker: 0 2px 4px rgba(20, 20, 20, 0.8);
+  --drop-shadow-light: 0 2px 4px rgba(250, 250, 250, 0.5);
+  --drop-shadow-lighter: 0 2px 4px rgba(250, 250, 250, 0.8);
+
+  /* Border radius */
+  --radius: 0.5rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  /* :root { */
+  /* --white: 0 0 100%;
+    --black: 0 0 0%;
+
+    --darkest: hsl(33 98% 17%);
+    --darker: hsl(33 85% 20%);
+    --dark: hsl(31 64% 26%);
+    --medium-dark: hsl(29 46% 37%);
+    --medium: hsl(28 41% 55%);
+    --medium-light: hsl(28 52% 65%);
+    --light: hsl(30 64% 74%);
+    --lighter: hsl(31 72% 83%);
+    --lightest: hsl(32 100% 92%); */
+
+  /* --radius: 0.5rem; */
+  /* } */
+
+  /* Scrollbar reset */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
