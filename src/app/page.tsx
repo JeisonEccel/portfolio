@@ -2,6 +2,7 @@ import { SectionDivider } from "@/components/section"
 import Introduction from "./(sections)/Introduction"
 import Skills from "./(sections)/Skill"
 import Projects from "./(sections)/Projects"
+import Experiences from "./(sections)/Experiences"
 
 export default function Page() {
   return (
@@ -11,6 +12,8 @@ export default function Page() {
       <Skills />
       <SectionDivider />
       <Projects />
+      <SectionDivider />
+      <Experiences />
     </>
   )
 }
