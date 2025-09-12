@@ -3,15 +3,16 @@
 
 @theme {
   /* Colors */
-  --color-darkest: hsl(33 98% 10%);
-  --color-darker: hsl(33 59% 20%);
-  --color-dark: hsl(32 40% 36%);
-  --color-medium-dark: hsl(33 29% 45%);
-  --color-medium: hsl(32 29% 60%);
-  --color-medium-light: hsl(32 41% 76%);
-  --color-light: hsl(32 100% 92%);
-  --color-lighter: hsl(33 100% 96%);
-  --color-lightest: hsl(36 100% 98%);
+  --color-darkest: hsl(197 94% 6%);
+  --color-darker: hsl(197 71% 14%);
+  --color-dark: hsl(197 66% 21%);
+  --color-medium-dark: hsl(197 37% 34%);
+  --color-medium: hsl(196 24% 46%);
+  --color-medium-light: hsl(176 14% 58%);
+  --color-light: hsl(126 15% 72%);
+  --color-lighter: hsl(100 24% 83%);
+  --color-lightest: hsl(198 60% 85%);
+  --color-white: hsl(0 0% 99%);
 
   /* Fonts */
   --font-sans: Helvetica, Arial, sans-serif;
@@ -30,23 +31,6 @@
 }
 
 @layer base {
-  /* :root { */
-  /* --white: 0 0 100%;
-    --black: 0 0 0%;
-
-    --darkest: hsl(33 98% 17%);
-    --darker: hsl(33 85% 20%);
-    --dark: hsl(31 64% 26%);
-    --medium-dark: hsl(29 46% 37%);
-    --medium: hsl(28 41% 55%);
-    --medium-light: hsl(28 52% 65%);
-    --light: hsl(30 64% 74%);
-    --lighter: hsl(31 72% 83%);
-    --lightest: hsl(32 100% 92%); */
-
-  /* --radius: 0.5rem; */
-  /* } */
-
   /* Scrollbar reset */
   .no-scrollbar::-webkit-scrollbar {
     display: none;
