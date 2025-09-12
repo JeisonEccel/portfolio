@@ -31,7 +31,7 @@ export function LogoImage({ logo, alt }: { logo: string; alt: string }) {
     <Image
       src={`logos/${logo}`}
       alt={alt}
-      className="w-36 h-16 border border-black/20 rounded-md p-2"
+      className="w-36 h-16 rounded-sm p-2"
       style={{ objectFit: "scale-down", background: "#FFF" }}
     />
   )
