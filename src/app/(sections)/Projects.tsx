@@ -4,29 +4,32 @@ import { Card } from "@/components/cards"
 import { ExpandButton } from "@/components/buttons"
 import { Paragraph } from "@/components/paragraph"
 import { Section } from "@/components/section"
-import { Title } from "@/components/title"
+import { SubTitle, Title } from "@/components/title"
 import { VideoExperience, Videos } from "@/components/video"
 import { designConcepts } from "@/constants/projects/design-concepts"
 import { threeDPrinting } from "@/constants/projects/printing"
 import { useState } from "react"
 import { ImageExperience, Images } from "@/components/image"
+import { Code, PencilRuler } from "lucide-react"
+import { portfolioWebsite } from "@/constants/projects/portfolio"
+import { LinkExperience, Links } from "@/components/links"
 
 type Project = {
   name: string
-  website?: string
+  type: string
   description?: string[]
-  contributions?: string[]
   images?: ImageExperience[]
   videos?: VideoExperience[]
+  links?: LinkExperience[]
 }
 
-const projectsList = [designConcepts, threeDPrinting]
+const projectsList = [portfolioWebsite, designConcepts, threeDPrinting]
 
 function Description({ description }: { description?: string[] }) {
   if (!description) return <></>
 
   return (
-    <div className="p-2 bg-white/50 border border-black/20 rounded-md">
+    <div className="border-t-1 border-light py-4">
       <Paragraph className="font-bold">Description:</Paragraph>
       {description.map((d, i) => (
         <Paragraph key={i}>{d}</Paragraph>
@@ -35,13 +38,28 @@ function Description({ description }: { description?: string[] }) {
   )
 }
 
-function ProjectCard(work: Project) {
+function ProjectCard(project: Project) {
   const [expanded, setExpanded] = useState(false)
-  const { name, description, images, videos } = work
+  const { name, type, description, images, videos, links } = project
   return (
-    <Card className="space-y-2">
+    <Card className="space-y-2 px-4 py-2">
       <div className="flex justify-between">
-        <div className="md:flex gap-4 items-end">{name}</div>
+        <div className="flex gap-4 items-center">
+          {type === "engineering" ? (
+            <PencilRuler
+              size={35}
+              strokeWidth={1}
+              className="text-medium-dark dark:text-lighter"
+            />
+          ) : (
+            <Code
+              size={35}
+              strokeWidth={1}
+              className="text-medium-dark dark:text-lighter"
+            />
+          )}
+          <SubTitle>{name}</SubTitle>
+        </div>
         <ExpandButton expanded={expanded} setExpanded={setExpanded} />
       </div>
       {expanded && (
@@ -49,6 +67,7 @@ function ProjectCard(work: Project) {
           <Description description={description} />
           <Images images={images} path="/projects" />
           <Videos videos={videos} />
+          <Links links={links} />
         </>
       )}
     </Card>
