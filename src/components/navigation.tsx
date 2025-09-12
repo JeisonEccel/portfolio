@@ -72,7 +72,7 @@ export function NavigationList({
   setNavBar: (a: boolean) => void
 }) {
   return (
-    <ul className="h-screen lg:h-auto lg:flex lg:space-x-10 items-center text-grey-medium-light">
+    <ul className="h-screen lg:h-auto lg:flex lg:space-x-10 items-center text-white">
       {sections.map((section) => (
         <NavItem key={section.id} setNavbar={setNavBar} {...section} />
       ))}
@@ -83,10 +83,10 @@ export function NavigationList({
 export function Navigation() {
   const [navBar, setNavBar] = useState(false)
   return (
-    <nav className="w-full bg-darkest text-lightest z-10">
+    <nav className="w-full bg-darkest text-white z-10">
       <div className="h-full mx-auto max-w-5xl lg:flex lg:justify-between lg:items-center p-10">
         <div className="flex justify-between items-center">
-          <p className="text-lg">Jeison Eccel</p>
+          <p className="text-2xl font-bitter">Jeison Eccel</p>
           <NavigationButton navBar={navBar} setNavBar={setNavBar} />
         </div>
         <div className={`${navBar ? "block" : "hidden"} lg:block`}>

@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col min-h-screen bg-lightest dark:bg-darkest text-darkest dark:text-lightest">
+          <div className="flex flex-col min-h-screen bg-white dark:bg-darker text-darkest dark:text-white">
             <Navigation />
             {children}
           </div>
