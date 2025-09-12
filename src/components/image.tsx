@@ -40,22 +40,22 @@ export function LogoImage({ logo, alt }: { logo: string; alt: string }) {
 export function LogoLink({
   logo,
   alt,
-  link,
+  href,
 }: {
   logo: string
   alt: string
-  link?: string
+  href?: string
 }) {
   if (!logo) {
     return <></>
   }
 
-  if (!link) {
+  if (!href) {
     return <LogoImage logo={logo} alt={alt} />
   }
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
+    <a href={href} target="_blank" rel="noopener noreferrer">
       <LogoImage logo={logo} alt={alt} />
     </a>
   )
@@ -71,7 +71,7 @@ export function Images({
   if (!images) return <></>
 
   return (
-    <div className="p-2 bg-white/50 border border-black/20 rounded-md">
+    <div className="border-t-1 border-light py-4">
       <Paragraph className="font-bold">Gallery:</Paragraph>
       <Gallery images={images} path={path} />
     </div>
