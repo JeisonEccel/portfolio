@@ -27,7 +27,7 @@ export function Videos({ videos }: { videos?: VideoExperience[] }) {
   if (!videos) return <></>
 
   return (
-    <div className="p-2 bg-white/50 border border-black/20 rounded-md">
+    <div className="border-t-1 border-light py-4">
       <Paragraph className="font-bold">Videos:</Paragraph>
       {videos.map((video, index) => (
         <VideoFrame key={index} video={video} />

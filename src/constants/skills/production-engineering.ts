@@ -1,8 +1,8 @@
 export const productionEngineering = {
   name: "Production Engineering",
   color: {
-    filled: "bg-blue-400 border-blue-600",
-    empty: "bg-blue-100 border-blue-300",
+    filled: "bg-sky-500 border-sky-600",
+    empty: "bg-sky-200 border-sky-400",
   },
   groups: [
     {

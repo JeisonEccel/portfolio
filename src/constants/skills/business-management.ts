@@ -1,8 +1,8 @@
 export const businessManagement = {
   name: "Business Management",
   color: {
-    filled: "bg-yellow-300 border-yellow-500",
-    empty: "bg-yellow-100 border-yellow-300",
+    filled: "bg-amber-400 border-amber-500",
+    empty: "bg-amber-100 border-amber-300",
   },
   groups: [
     {

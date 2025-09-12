@@ -10,7 +10,7 @@ export function Title({
   return (
     <h1
       className={cn(
-        "text-xl md:text-4xl font-bold leading-relaxed pb-10",
+        "text-xl md:text-4xl font-bitter leading-relaxed pb-4",
         className
       )}
     >
@@ -28,7 +28,7 @@ export function SubTitle({
 }) {
   return (
     <h1
-      className={cn("text-sm md:text-xl font-bold leading-relaxe", className)}
+      className={cn("text-sm md:text-xl font-bitter leading-relaxe", className)}
     >
       {children}
     </h1>

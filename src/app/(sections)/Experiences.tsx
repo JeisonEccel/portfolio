@@ -23,6 +23,7 @@ import { udesc } from "@/constants/education/udesc"
 import { senaiAppretice, senaiTechnician } from "@/constants/education/senai"
 import { VideoExperience, VideoFrame, Videos } from "@/components/video"
 import { RadioButton } from "@/components/radion-button"
+import { BriefcaseBusiness, GraduationCap } from "lucide-react"
 
 type WorkExperience = {
   company: string
@@ -83,7 +84,7 @@ function CompanyHeader({
   return (
     <div className="pt-2 md:p-0">
       <SubTitle className="font-normal">{title}</SubTitle>
-      <Paragraph className="tracking-widest p-0 text-gray-400 text-sm md:text-base">
+      <Paragraph className="tracking-widest p-0 dark:text-lighter text-sm">
         {from} to {to} | {country}
       </Paragraph>
     </div>
@@ -94,7 +95,7 @@ function Description({ description }: { description?: string[] }) {
   if (!description) return <></>
 
   return (
-    <div className="p-2 bg-white/50 border border-black/20 rounded-md">
+    <div className="border-t-1 border-light py-4">
       <Paragraph className="font-bold">Description:</Paragraph>
       {description.map((d, i) => (
         <Paragraph key={i}>{d}</Paragraph>
@@ -107,7 +108,7 @@ function Contributions({ contributions }: { contributions?: string[] }) {
   if (!contributions) return <></>
 
   return (
-    <div className="p-2 bg-white/50 border border-black/20 rounded-md">
+    <div className="border-t-1 border-light py-4">
       <Paragraph className="font-bold">Contributions & Learnings:</Paragraph>
       <DiscList>
         {contributions.map((c, i) => (
@@ -136,16 +137,23 @@ function WorkCard(work: WorkExperience) {
     videos,
   } = work
   return (
-    <Card className="bg-blue-50 dark:bg-blue-900/75 border-blue-300 dark:border-blue-800  space-y-2">
+    <Card className="space-y-2 px-2 md:px-4 py-2">
       <div className="flex justify-between">
-        <div className="md:flex gap-4 items-end">
-          {logo && <LogoLink logo={logo} alt={company} link={website} />}
-          <CompanyHeader
-            title={position}
-            from={from}
-            to={to}
-            country={country}
-          />
+        <div className="md:flex gap-4 items-center">
+          {logo && <LogoLink logo={logo} alt={company} href={website} />}
+          <div className="flex items-center gap-2">
+            <BriefcaseBusiness
+              size={35}
+              strokeWidth={1}
+              className="text-medium-dark dark:text-lighter"
+            />
+            <CompanyHeader
+              title={position}
+              from={from}
+              to={to}
+              country={country}
+            />
+          </div>
         </div>
         <ExpandButton expanded={expanded} setExpanded={setExpanded} />
       </div>
@@ -175,11 +183,23 @@ function EducationCard(education: EducationExperience) {
     videos,
   } = education
   return (
-    <Card className="bg-green-100 dark:bg-green-900/75 border-green-400 dark:border-green-700 space-y-2">
+    <Card className="space-y-2 px-2 md:px-4 py-2">
       <div className="flex justify-between">
-        <div className="md:flex gap-4 items-end">
-          {logo && <LogoLink logo={logo} alt={institution} link={website} />}
-          <CompanyHeader title={course} from={from} to={to} country={country} />
+        <div className="md:flex gap-4 items-center">
+          {logo && <LogoLink logo={logo} alt={institution} href={website} />}
+          <div className="flex gap-2 items-center">
+            <GraduationCap
+              size={35}
+              strokeWidth={1}
+              className="text-medium-dark dark:text-lighter"
+            />
+            <CompanyHeader
+              title={course}
+              from={from}
+              to={to}
+              country={country}
+            />
+          </div>
         </div>
         {(images || !!videos) && (
           <ExpandButton expanded={expanded} setExpanded={setExpanded} />

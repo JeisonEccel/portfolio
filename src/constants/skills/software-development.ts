@@ -1,8 +1,8 @@
 export const softwareDevelopment = {
   name: "Software Development",
   color: {
-    filled: "bg-green-400 border-green-600",
-    empty: "bg-green-100 border-green-300",
+    filled: "bg-teal-500 border-teal-600",
+    empty: "bg-teal-200 border-teal-400",
   },
   groups: [
     {
