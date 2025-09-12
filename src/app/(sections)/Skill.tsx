@@ -73,9 +73,7 @@ function SkillsGroup({
 }) {
   return (
     <div>
-      <SubTitle className="text-base md:text-base font-normal pb-2">
-        {name}
-      </SubTitle>
+      <SubTitle className="md:text-base font-normal pb-2">{name}</SubTitle>
       {skills.map((skill, index) => (
         <SkillProgress key={index} color={color} {...skill} />
       ))}
