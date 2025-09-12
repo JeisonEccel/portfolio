@@ -3,35 +3,9 @@
 import { useState } from "react"
 import { X, Menu } from "lucide-react"
 import Link from "next/link"
+import { sections } from "@/constants/sections"
 
-const sections = [
-  {
-    id: "intro",
-    name: "Intro",
-  },
-  {
-    id: "skills",
-    name: "Skills",
-  },
-  {
-    id: "projects",
-    name: "Projects",
-  },
-  {
-    id: "experiences",
-    name: "Experiences",
-  },
-  {
-    id: "about",
-    name: "About",
-  },
-  {
-    id: "contact",
-    name: "Contact",
-  },
-]
-
-export function NavigationButton({
+function NavigationButton({
   navBar,
   setNavBar,
 }: {
@@ -66,11 +40,7 @@ function NavItem({
   )
 }
 
-export function NavigationList({
-  setNavBar,
-}: {
-  setNavBar: (a: boolean) => void
-}) {
+function NavigationList({ setNavBar }: { setNavBar: (a: boolean) => void }) {
   return (
     <ul className="h-screen lg:h-auto lg:flex lg:space-x-10 items-center text-white">
       {sections.map((section) => (

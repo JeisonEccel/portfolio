@@ -1,6 +1,7 @@
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
 import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 
 export const metadata = {
   title: "Jeison Eccel",
@@ -19,6 +20,7 @@ export default function RootLayout({
           <div className="flex flex-col min-h-screen bg-white dark:bg-darker text-darkest dark:text-white">
             <Navigation />
             {children}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
