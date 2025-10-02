@@ -14,6 +14,7 @@ import { Code, PencilRuler } from "lucide-react"
 import { portfolioWebsite } from "@/constants/projects/portfolio"
 import { LinkExperience, Links } from "@/components/links"
 import { myFinancesBackend } from "@/constants/projects/my-finances-backend"
+import { myFinancesFrontend } from "@/constants/projects/my-finances-frontend"
 
 type Project = {
   name: string
@@ -26,6 +27,7 @@ type Project = {
 
 const projectsList = [
   myFinancesBackend,
+  myFinancesFrontend,
   portfolioWebsite,
   designConcepts,
   threeDPrinting,
