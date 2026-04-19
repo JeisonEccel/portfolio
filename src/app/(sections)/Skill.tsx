@@ -2,9 +2,9 @@ import { Card } from "@/components/cards"
 import { Paragraph } from "@/components/paragraph"
 import { Section } from "@/components/section"
 import { SubTitle, Title } from "@/components/title"
-import { businessManagement } from "@/constants/skills/business-management"
-import { productionEngineering } from "@/constants/skills/production-engineering"
-import { softwareDevelopment } from "@/constants/skills/software-development"
+import { systemsEngineering } from "@/constants/skills/systems-engineering"
+import { operationsSystems } from "@/constants/skills/operations-systems"
+import { productStrategy } from "@/constants/skills/product-strategy"
 
 type Skill = {
   name: string
@@ -27,11 +27,7 @@ type SkillSet = {
   groups: SkillGroup[]
 }
 
-const skillsets = [
-  businessManagement,
-  softwareDevelopment,
-  productionEngineering,
-]
+const skillsets = [systemsEngineering, operationsSystems, productStrategy]
 
 function SkillProgress({
   name,
@@ -100,10 +96,14 @@ export default function Skills() {
     <Section id="skills">
       <Title>Skills</Title>
       <Paragraph>
-        The skills below are grouped by category for easier navigation. Each
-        skill is rated on a scale from 1 to 5, where 1 represents basic
-        knowledge or limited experience, and 5 reflects extensive expertise and
-        hands-on experience.
+        These skills reflect the tools and capabilities I use to design, build,
+        and scale software systems.
+      </Paragraph>
+      <Paragraph>
+        They are grouped by area to highlight how different disciplines come
+        together in real-world applications. Proficiency is rated from 1 to 5,
+        where 1 indicates foundational knowledge and 5 represents extensive
+        hands-on experience applying the skill in production environments.
       </Paragraph>
       <div className="flex flex-col md:grid-cols-2 gap-5">
         {skillsets.map((skillset, index) => {
