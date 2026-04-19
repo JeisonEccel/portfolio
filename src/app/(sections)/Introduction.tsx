@@ -6,26 +6,40 @@ import { Title } from "@/components/title"
 export default function Introduction() {
   return (
     <Section id="intro">
-      <Title>
-        Startup Founder, Software Developer, and Production Engineer
-      </Title>
-      <div className="md:flex md:space-x-6">
+      <Title>Turning Complex Operations into Software Solutions</Title>
+      <div className="md:grid md:grid-cols-2 md:gap-6">
         <Image
           src="/images/intro-photo.jpg"
           alt="Small business"
-          className="w-full md:w-1/2 max-h-72"
+          className="w-full max-h-120"
           style={{ height: "100%", objectFit: "cover" }}
         />
-        <Paragraph className="md:text-base md:w-1/2 py-5 md:py-0">
-          After 15 years in manufacturing and production engineering, I shifted
-          to software development, bringing the problem-solving mindset of an
-          engineer to the digital world. In 2023, I founded my own startup,
-          where I combine hands-on coding with running a company. This site
-          showcases my work at the intersection of Software Development,
-          Production Engineering, and Entrepreneurship — from mechanical systems
-          to software projects — demonstrating how practical engineering
-          experience fuels innovative software solutions.
-        </Paragraph>
+        <div className="md:text-base py-5 md:py-0">
+          <Paragraph>
+            I design and build systems that turn complex operations into
+            scalable, reliable software.
+          </Paragraph>
+          <Paragraph>
+            With a background spanning 15+ years in production engineering and
+            software development, I specialize in translating real-world
+            workflows into modern platforms, combining system architecture,
+            cloud infrastructure, and product thinking.
+          </Paragraph>
+          <Paragraph>
+            My work focuses on areas such as multi-tenant SaaS systems, backend
+            services, and developer platforms, where performance, scalability,
+            and usability are critical. I’ve built end-to-end solutions
+            integrating business operations, data systems, and user-facing
+            applications, bridging the gap between engineering environments and
+            software systems.
+          </Paragraph>
+          <Paragraph>
+            This site showcases selected projects and experiences across
+            software, systems design, and operations, highlighting how practical
+            engineering knowledge can be applied to build better, more intuitive
+            technology.
+          </Paragraph>
+        </div>
       </div>
     </Section>
   )

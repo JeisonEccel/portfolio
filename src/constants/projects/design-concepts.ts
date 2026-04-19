@@ -2,7 +2,9 @@ export const designConcepts = {
   name: "Design Concepts",
   type: "engineering",
   description: [
-    "After moving to Canada, I realized that landing my first full-time role as a mechanical designer would take more than a résumé — I needed to showcase my skills in action. To do that, I challenged myself by creating a series of design concepts using SolidWorks, exploring everything from guitar amplifiers and electrical devices to more organic, product-focused shapes. To share this journey, I launched a short-lived YouTube channel where I posted videos of my models and creative process. Although the channel lasted only a few months, the experience helped me refine my design storytelling, strengthen my SolidWorks expertise, and build confidence in presenting my ideas visually.",
+    "A series of conceptual design projects developed using SolidWorks, exploring a range of product ideas from mechanical and electrical devices to more organic, form-driven designs.",
+    "This initiative focused on translating ideas into detailed 3D models, combining functionality with visual design. The work includes concept exploration, modeling, and presentation, with an emphasis on clearly communicating design intent through renders and visual storytelling.",
+    "As part of the process, selected concepts were documented and shared through short video presentations, reinforcing the ability to present technical ideas in an accessible and engaging way.",
   ],
   images: [
     { file: "concept-01.png", alt: "Guitar Amp Concept by Jeison" },
