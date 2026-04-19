@@ -1,7 +1,5 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { useTheme } from "next-themes"
 import { Image } from "@/components/image"
 import { Paragraph } from "@/components/paragraph"
 import { Section } from "@/components/section"
@@ -22,13 +20,6 @@ const links = [
 ]
 
 export default function Contact() {
-  const { resolvedTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
   return (
     <Section id="contact">
       <Title>Let&apos;s Chat!</Title>
@@ -45,12 +36,6 @@ export default function Contact() {
       </Paragraph>
       <div className="flex gap-4">
         {links.map((link, index) => {
-          const currentTheme = mounted ? resolvedTheme : "light"
-          const iconSrc =
-            currentTheme === "dark"
-              ? `/icons/dark/${link.icon}`
-              : `/icons/light/${link.icon}`
-
           return (
             <a
               key={index}
@@ -58,7 +43,11 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src={iconSrc} alt={link.name} className="w-8 h-8" />
+              <Image
+                src={`/icons/light/${link.icon}`}
+                alt={link.name}
+                className="w-8 h-8 dark:invert"
+              />
             </a>
           )
         })}
