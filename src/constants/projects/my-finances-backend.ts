@@ -2,7 +2,9 @@ export const myFinancesBackend = {
   name: "My Finances API",
   type: "software",
   description: [
-    "This is the backend API for the My Finances application, built with Spring Boot and Postgresql. It provides RESTful endpoints for managing user accounts, financial transactions, and budgeting features. The API is designed to be secure, scalable, and efficient, ensuring that users can reliably access and manage their financial data.",
+    "Backend API for a personal finance management application, designed to handle user accounts, transactions, and budgeting workflows.",
+    "Built with Java (Spring Boot) and PostgreSQL, the system exposes RESTful endpoints for managing financial data with a focus on data integrity, security, and clear domain structure. The project explores backend design patterns for handling transactional data, user-specific datasets, and modular service organization.",
+    "While developed as a side project, it reflects practical considerations such as API structure, validation, and scalability, serving as a foundation for building reliable financial systems.",
   ],
   links: [
     { title: "GitHub", href: "https://github.com/JeisonEccel/my-finances-api" },

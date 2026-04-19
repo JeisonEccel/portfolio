@@ -11,10 +11,11 @@ import { threeDPrinting } from "@/constants/projects/printing"
 import { useState } from "react"
 import { ImageExperience, Images } from "@/components/image"
 import { Code, PencilRuler } from "lucide-react"
-import { portfolioWebsite } from "@/constants/projects/portfolio"
+import { personalWebsite } from "@/constants/projects/personal-website"
 import { LinkExperience, Links } from "@/components/links"
 import { myFinancesBackend } from "@/constants/projects/my-finances-backend"
 import { myFinancesFrontend } from "@/constants/projects/my-finances-frontend"
+import { myGuitarPracticeV1 } from "@/constants/projects/my-guitar-practice-v1"
 
 type Project = {
   name: string
@@ -28,7 +29,8 @@ type Project = {
 const projectsList = [
   myFinancesBackend,
   myFinancesFrontend,
-  portfolioWebsite,
+  personalWebsite,
+  myGuitarPracticeV1,
   designConcepts,
   threeDPrinting,
 ]
