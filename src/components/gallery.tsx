@@ -3,7 +3,7 @@
 import { createPortal } from "react-dom"
 import { useState, useCallback, useEffect } from "react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import { Image, ImageExperience } from "./image"
+import { Image, ImageExperience as ImageDetails } from "./image"
 import { cn } from "@/lib/utils"
 
 function GalleryGrid({
@@ -11,7 +11,7 @@ function GalleryGrid({
   path,
   setActiveIndex,
 }: {
-  images?: ImageExperience[]
+  images?: ImageDetails[]
   path: string
   setActiveIndex: (i: number) => void
 }) {
@@ -48,7 +48,7 @@ function ControlButton({
       onClick={onClick}
       className={cn(
         "absolute text-white bg-black/50 rounded-full p-2 hover:bg-black/80 cursor-pointer",
-        className
+        className,
       )}
     >
       {children}
@@ -92,7 +92,7 @@ function ImageDisplay({
   activeIndex,
   setActiveIndex,
 }: {
-  images: ImageExperience[]
+  images: ImageDetails[]
   path: string
   activeIndex: number
   setActiveIndex: (i: number | null) => void
@@ -133,7 +133,7 @@ function ImageDisplay({
         />
       </div>
     </div>,
-    document.body
+    document.body,
   )
 }
 
@@ -141,7 +141,7 @@ export function Gallery({
   images,
   path = "",
 }: {
-  images: ImageExperience[]
+  images: ImageDetails[]
   path?: string
 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -154,17 +154,17 @@ export function Gallery({
         setActiveIndex(null)
       } else if (e.key === "ArrowRight") {
         setActiveIndex((prev) =>
-          prev !== null ? (prev + 1) % (images?.length || 1) : prev
+          prev !== null ? (prev + 1) % (images?.length || 1) : prev,
         )
       } else if (e.key === "ArrowLeft") {
         setActiveIndex((prev) =>
           prev !== null
             ? (prev - 1 + (images?.length || 1)) % (images?.length || 1)
-            : prev
+            : prev,
         )
       }
     },
-    [activeIndex, images]
+    [activeIndex, images],
   )
 
   useEffect(() => {

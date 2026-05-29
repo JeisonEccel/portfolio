@@ -1,4 +1,6 @@
-export const armetal = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const armetal: Experience = {
   work: {
     company: "A&R Metal Industries",
     position: "Process Engineer",

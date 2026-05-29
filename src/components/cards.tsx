@@ -10,8 +10,8 @@ export function Card({
   return (
     <div
       className={cn(
-        "bg-lightest dark:bg-dark rounded-sm items-center p-2",
-        className
+        "bg-lightest text-darkest rounded-md items-center p-2 shadow-md shadow-gray-500",
+        className,
       )}
     >
       {children}

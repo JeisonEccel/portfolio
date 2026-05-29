@@ -1,4 +1,6 @@
-export const boxcar = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const boxcar: Experience = {
   work: {
     company: "Boxcar - Solucoes Alternativas de Transport",
     position: "Mechanical Designer",

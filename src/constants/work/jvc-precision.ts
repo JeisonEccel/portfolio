@@ -1,4 +1,6 @@
-export const jvcPrecision = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const jvcPrecision: Experience = {
   work: {
     company: "JVC Precision Ltd",
     position: "Design & Engineering Manager",

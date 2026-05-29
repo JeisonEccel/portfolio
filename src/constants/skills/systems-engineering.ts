@@ -1,4 +1,6 @@
-export const systemsEngineering = {
+import { SkillSet } from "@/app/(sections)/Skills"
+
+export const systemsEngineering: SkillSet = {
   name: "Systems & Software Engineering",
   color: {
     filled: "bg-teal-500 border-teal-600",

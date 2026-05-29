@@ -1,4 +1,6 @@
-export const pafer = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const pafer: Experience = {
   work: {
     company: "Pafer Comercial Ltd",
     position: "Warehouse Associate",

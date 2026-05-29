@@ -1,4 +1,6 @@
-export const productStrategy = {
+import { SkillSet } from "@/app/(sections)/Skills"
+
+export const productStrategy: SkillSet = {
   name: "Product & Management Strategy",
   color: {
     filled: "bg-amber-400 border-amber-500",

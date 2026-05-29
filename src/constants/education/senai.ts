@@ -1,4 +1,6 @@
-export const senaiTechnician = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const senaiTechnician: Experience = {
   education: {
     institution: "SENAI",
     course: "Technician, Mechanical Design",
@@ -13,7 +15,7 @@ export const senaiTechnician = {
   },
 }
 
-export const senaiAppretice = {
+export const senaiAppretice: Experience = {
   education: {
     institution: "SENAI",
     course: "Apprenticeship, Machining",
