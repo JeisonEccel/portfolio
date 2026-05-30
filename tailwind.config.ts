@@ -1,14 +1,14 @@
 import type { Config } from "tailwindcss"
 
 const darkest = "197, 94%, 6%"
-const darker = "197, 71%, 14%"
-const dark = "197, 66%, 21%"
-const mediumDark = "197, 37%, 34%"
-const medium = "196, 24%, 46%"
-const mediumLight = "176, 14%, 58%"
-const light = "126, 15%, 72%"
-const lighter = "100, 24%, 83%"
-const lightest = "198, 60%, 85%"
+const darker = "201, 96%, 9%"
+const dark = "204, 97%, 12%"
+const mediumDark = "206, 98%, 18%"
+const medium = "208, 100%, 30%"
+const mediumLight = "208, 49%, 56%"
+const light = "208, 72%, 82%"
+const lighter = "208, 68%, 90%"
+const lightest = "189, 100%, 94%"
 const white = "0, 0%, 99%"
 
 export default {
@@ -21,6 +21,7 @@ export default {
         darker: `hsl(${darker})`,
         dark: `hsl(${dark})`,
         "medium-dark": `hsl(${mediumDark})`,
+        medium: `hsl(${medium})`,
         "medium-light": `hsl(${mediumLight})`,
         light: `hsl(${light})`,
         lighter: `hsl(${lighter})`,

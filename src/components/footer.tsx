@@ -1,11 +1,10 @@
-import { sections } from "@/constants/sections"
+import { pages } from "@/constants/pages"
 import Link from "next/link"
-import { Paragraph } from "./paragraph"
 
-function NavItem({ id, name }: { id: string; name: string }) {
+function NavItem({ name, path }: { name: string; path: string }) {
   return (
     <li className="text-left">
-      <Link href={`#${id}`}>{name}</Link>
+      <Link href={`/${path}`}>{name}</Link>
     </li>
   )
 }
@@ -13,12 +12,9 @@ function NavItem({ id, name }: { id: string; name: string }) {
 function NavigationList() {
   return (
     <div>
-      <Paragraph className="border-b-1 border-white uppercase font-bold">
-        Links
-      </Paragraph>
-      <ul className="space-y-1 py-4">
-        {sections.map((section) => (
-          <NavItem key={section.id} {...section} />
+      <ul className="flex flex-col md:flex-row gap-2 md:gap-10">
+        {pages.map((page) => (
+          <NavItem key={page.id} {...page} />
         ))}
       </ul>
     </div>
@@ -27,10 +23,10 @@ function NavigationList() {
 
 export function Footer() {
   return (
-    <footer className="bg-darkest text-white text-sm font-light pb-10">
-      <div className="flex justify-between max-w-5xl mx-auto p-4 md:p-10">
+    <footer className="bg-black text-white text-sm font-light pb-10 md:pb-0">
+      <div className="flex flex-row-reverse justify-between max-w-6xl mx-auto p-4 pb-10 md:py-14">
+        <p>&copy; {new Date().getFullYear()} Jeison Eccel</p>
         <NavigationList />
-        <p>&copy; 2025 Jeison Eccel</p>
       </div>
     </footer>
   )

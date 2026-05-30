@@ -1,39 +1,32 @@
 "use client"
 
 import { useState } from "react"
-import { X, Menu } from "lucide-react"
+import { X, Menu, LucideIcon } from "lucide-react"
 import Link from "next/link"
-import { sections } from "@/constants/sections"
-
-function NavigationButton({
-  navBar,
-  setNavBar,
-}: {
-  navBar: boolean
-  setNavBar: (a: boolean) => void
-}) {
-  const size = 36
-  return (
-    <div className="lg:hidden">
-      <button onClick={() => setNavBar(!navBar)}>
-        {navBar ? <X size={size} /> : <Menu size={size} />}
-      </button>
-    </div>
-  )
-}
+import { pages } from "@/constants/pages"
+import { cn } from "@/lib/utils"
 
 function NavItem({
   id,
   name,
+  icon,
   setNavbar,
 }: {
   id: string
   name: string
+  icon?: LucideIcon
   setNavbar: (a: boolean) => void
 }) {
+  const ItemIcon = icon
   return (
-    <li className="border-b-2 lg:border-b-0 border-dark text-left py-5 lg:p-0">
-      <Link href={`#${id}`} onClick={() => setNavbar(false)}>
+    <li className="border-b-1 md:border-b-0 border-gray-400 text-left md:p-0 text-sm md:w-24">
+      <Link
+        href={`#${id}`}
+        onClick={() => setNavbar(false)}
+        className="flex flex-row md:flex-col md:justify-center items-center hover:text-black gap-4 md:gap-0 
+        p-2 py-5 md:py-2 hover:bg-blue-100 md:rounded-lg"
+      >
+        {ItemIcon && <ItemIcon className="h-5 w-5" />}
         {name}
       </Link>
     </li>
@@ -42,27 +35,61 @@ function NavItem({
 
 function NavigationList({ setNavBar }: { setNavBar: (a: boolean) => void }) {
   return (
-    <ul className="h-screen lg:h-auto lg:flex lg:space-x-10 items-center text-white">
-      {sections.map((section) => (
-        <NavItem key={section.id} setNavbar={setNavBar} {...section} />
+    <ul className="md:flex md:gap-2 items-center">
+      {pages.map((page) => (
+        <NavItem key={page.id} setNavbar={setNavBar} {...page} />
       ))}
     </ul>
   )
 }
 
-export function Navigation() {
-  const [navBar, setNavBar] = useState(false)
+export function Navigation({ children }: { children: React.ReactNode }) {
+  const [show, setShow] = useState(false)
+
   return (
-    <nav className="w-full bg-darkest text-white z-10">
-      <div className="h-full mx-auto max-w-5xl lg:flex lg:justify-between lg:items-center p-10">
-        <div className="flex justify-between items-center">
+    <>
+      <div className="fixed md:hidden bg-white text-gray-700 top-0 left-0 right-0 z-60">
+        <div className="flex justify-between items-center h-20 p-4">
           <p className="text-2xl font-bitter">Jeison Eccel</p>
-          <NavigationButton navBar={navBar} setNavBar={setNavBar} />
-        </div>
-        <div className={`${navBar ? "block" : "hidden"} lg:block`}>
-          <NavigationList setNavBar={setNavBar} />
+          <div className="md:hidden">
+            <button onClick={() => setShow(!show)}>
+              {show ? <X size={36} /> : <Menu size={36} />}
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
+
+      {show && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 md:hidden mt-20"
+          onClick={() => setShow(false)}
+        />
+      )}
+
+      <nav
+        className={cn(
+          "fixed md:static z-50",
+          "md:inset-y-0 left-0 right-0 md:left-auto md:right-auto md:w-auto",
+          "top-20 md:top-auto",
+          "flex flex-col md:flex-row bg-white text-gray-700",
+          "transition-transform duration-200 md:duration-0 md:transition-none",
+          show
+            ? "translate-y-0 md:translate-y-0"
+            : "-translate-y-full md:translate-y-0",
+        )}
+      >
+        <div className="w-full max-w-6xl mx-auto flex items-center justify-between p-4">
+          <div className="hidden md:flex items-center">
+            <p className="text-2xl font-bitter">Jeison Eccel</p>
+          </div>
+
+          <div className="flex-1 md:flex-none">
+            <NavigationList setNavBar={setShow} />
+          </div>
+        </div>
+      </nav>
+
+      <div className="flex-1 h-screen overflow-auto">{children}</div>
+    </>
   )
 }

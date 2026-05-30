@@ -1,4 +1,6 @@
-export const centennial = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const centennial: Experience = {
   education: {
     institution: "Centennial College",
     course: "Post-Graduate Certificate, Project Management",

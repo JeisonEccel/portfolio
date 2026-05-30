@@ -1,5 +1,4 @@
 import { CSSProperties } from "react"
-import { Paragraph } from "./paragraph"
 import { Gallery } from "./gallery"
 
 export type ImageExperience = {
@@ -31,7 +30,7 @@ export function LogoImage({ logo, alt }: { logo: string; alt: string }) {
     <Image
       src={`logos/${logo}`}
       alt={alt}
-      className="w-36 h-16 rounded-sm p-2"
+      className="w-24 md:w-36 h-12 md:h-24 rounded-sm p-2 shadow-md shadow-gray-300"
       style={{ objectFit: "scale-down", background: "#FFF" }}
     />
   )
@@ -72,7 +71,7 @@ export function Images({
 
   return (
     <div className="border-t-1 border-light py-4">
-      <Paragraph className="font-bold">Gallery:</Paragraph>
+      <p className="font-bold">Gallery:</p>
       <Gallery images={images} path={path} />
     </div>
   )

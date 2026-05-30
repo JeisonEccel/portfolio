@@ -10,8 +10,8 @@ export function Title({
   return (
     <h1
       className={cn(
-        "text-xl md:text-4xl font-bitter leading-relaxed pb-4",
-        className
+        "text-3xl md:text-5xl font-bold font-bitter leading-relaxed",
+        className,
       )}
     >
       {children}

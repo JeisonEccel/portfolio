@@ -1,4 +1,6 @@
-export const domBosco = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const domBosco: Experience = {
   work: {
     company: "Dom Bosco Machining",
     position: "Mechanical Designer",

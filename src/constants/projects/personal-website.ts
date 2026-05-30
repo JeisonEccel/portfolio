@@ -1,6 +1,9 @@
-export const personalWebsite = {
+import { Project } from "@/app/(sections)/Projects"
+
+export const personalWebsite: Project = {
   name: "Personal Website",
   type: "software",
+  cover: "/projects/personal-website.png",
   description: [
     "Personal portfolio platform built to present projects, experience, and technical capabilities in a structured and evolving format.",
     "Developed using Next.js 15, TypeScript, and Tailwind CSS, the site functions as both a portfolio and an extended resume, allowing for more detailed presentation of systems, projects, and technical decisions. It is designed with flexibility in mind, enabling continuous updates and iteration as new work and ideas are developed.",
@@ -8,6 +11,5 @@ export const personalWebsite = {
   ],
   links: [
     { title: "GitHub", href: "https://github.com/JeisonEccel/portfolio" },
-    { title: "Live Website", href: "https://www.jeisoneccel.com" },
   ],
 }

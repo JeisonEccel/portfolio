@@ -1,4 +1,4 @@
-import { Paragraph } from "@/components/paragraph"
+import { Image } from "@/components/image"
 import { Section } from "@/components/section"
 import { Title } from "@/components/title"
 
@@ -6,8 +6,15 @@ export default function About() {
   return (
     <Section id="about">
       <Title>About Me</Title>
-      <div className="flex flex-col gap-4">
-        <Paragraph>
+      <div className="space-y-4 text-justify">
+        <div className="flex md:block md:float-right w-full md:w-96 md:ml-4">
+          <Image
+            src="/images/about.jpg"
+            alt="Jeison Eccel"
+            className="w-full h-[480px] object-cover rounded-2xl shadow-lg"
+          />
+        </div>
+        <p>
           I was born and raised in Joinville, SC, a dynamic industrial city
           known as the &quot;Manchester Catarinense&quot; for its thriving
           mechanical and manufacturing hub, home to Brazil&apos;s largest
@@ -15,8 +22,8 @@ export default function About() {
           Joinville Dance Festival. My earliest memories are filled with
           sketches, from animals and landscapes to people, always drawing,
           always creating.
-        </Paragraph>
-        <Paragraph>
+        </p>
+        <p>
           At age 8, my curiosity exploded when my dad brought home our first
           computer. I quickly taught myself by exploring features online,
           becoming the go-to tech helper in my circle. Later, in early high
@@ -24,8 +31,8 @@ export default function About() {
           three months, and even before the course ended, that skill opened the
           door to a machining apprenticeship at SENAI, where I learned how
           drawings truly come to life.
-        </Paragraph>
-        <Paragraph>
+        </p>
+        <p>
           After high school, I faced a tough choice between full-time Mechanical
           Engineering or a night technician certification in Mechanical
           Projects. Financial constraints made the decision easy, but as I dove
@@ -35,16 +42,16 @@ export default function About() {
           logistics expert, experiences that shaped my ambition to pursue
           further study in Production Engineering at UDESC, one of Brazil&apos;s
           top-ranked universities.
-        </Paragraph>
-        <Paragraph>
+        </p>
+        <p>
           While at UDESC, I balanced studies with work at Kozetek, delivering
           firsthand lessons on flexibility, collaboration, and leadership. After
           graduating, I joined Multicase Systems to support automotive
           customers, but realized I needed to improve my English to bridge
           global opportunities. That led me to Centennial College in Toronto to
           study Project Management and start my Canadian journey.
-        </Paragraph>
-        <Paragraph>
+        </p>
+        <p>
           Canada quickly felt like home, from working in software development at
           JVC Precision and 7Gen to expanding my craft and mindset. In 2023, I
           turned a long-standing passion into reality and founded Nengatu, a
@@ -52,8 +59,8 @@ export default function About() {
           every hat, from backend and frontend developer to marketer, legal
           manager, and salesperson, learning to prioritize ruthlessly and build
           with heart.
-        </Paragraph>
-        <Paragraph>
+        </p>
+        <p>
           When I&apos;m not behind the screen or sketching ideas, you&apos;ll
           find me strumming my electric guitar, something I began at 14, and
           later taught neighborhood kids at age 15. I met my wife through music;
@@ -62,7 +69,7 @@ export default function About() {
           in her own career. And yes, growing up, I wasn&apos;t a soccer fanatic
           like many Brazilians. I loved volleyball, and still do, along with
           swimming and cycling.
-        </Paragraph>
+        </p>
       </div>
     </Section>
   )

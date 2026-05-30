@@ -6,13 +6,18 @@ export function Section({
   children,
   className,
 }: {
-  id: string
+  id?: string
   children: React.ReactNode
   className?: string
 }) {
   return (
     <section id={id}>
-      <div className={cn("h-full mx-auto max-w-5xl p-4 md:p-8", className)}>
+      <div
+        className={cn(
+          "h-full mx-auto max-w-6xl pt-24 md:pb-24 md:pt-10 px-4",
+          className,
+        )}
+      >
         {children}
       </div>
     </section>
