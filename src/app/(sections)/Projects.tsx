@@ -11,7 +11,8 @@ import { Code, FolderGit, PencilRuler } from "lucide-react"
 import { personalWebsite } from "@/constants/projects/personal-website"
 import { LinkExperience, Links } from "@/components/links"
 import { myFinancesBackend } from "@/constants/projects/my-finances-backend"
-import { guitarPracticeV1 } from "@/constants/projects/my-guitar-practice-v1"
+import { guitarPracticeV1 } from "@/constants/projects/guitar-practice-v1"
+import { guitarPracticeV2 } from "@/constants/projects/guitar-practice-v2"
 import { cn } from "@/lib/utils"
 
 export type Project = {
@@ -24,7 +25,12 @@ export type Project = {
   links?: LinkExperience[]
 }
 
-const projectsList = [myFinancesBackend, personalWebsite, guitarPracticeV1]
+const projectsList = [
+  guitarPracticeV2,
+  myFinancesBackend,
+  personalWebsite,
+  guitarPracticeV1,
+]
 
 function ProjectCard(project: { invert: boolean } & Project) {
   const [expanded, setExpanded] = useState(false)
@@ -46,12 +52,14 @@ function ProjectCard(project: { invert: boolean } & Project) {
         )}
       >
         {cover && (
-          <Image
-            src={cover}
-            alt={name}
-            className="rounded-lg shadow-lg shadow-gray-500 w-full md:w-80 max-h-96 md:max-h-none"
-            style={{ objectFit: "cover" }}
-          />
+          <div className="w-full">
+            <Image
+              src={cover}
+              alt={name}
+              className="rounded-lg shadow-lg shadow-gray-500 w-full md:w-80 max-h-96 md:max-h-none"
+              style={{ objectFit: "cover" }}
+            />
+          </div>
         )}
         <div className="space-y-4">
           {description &&
