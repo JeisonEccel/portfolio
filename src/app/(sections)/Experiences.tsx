@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Card } from "@/components/cards"
 import { ExpandButton } from "@/components/buttons"
 import { ImageExperience, Images, LogoLink } from "@/components/image"
-import { Paragraph } from "@/components/paragraph"
 import { Section } from "@/components/section"
 import { SubTitle, Title } from "@/components/title"
 import { DiscItem, DiscList } from "@/components/disc-list"
@@ -21,11 +20,10 @@ import { pafer } from "@/constants/work/pafer"
 import { centennial } from "@/constants/education/centennial"
 import { udesc } from "@/constants/education/udesc"
 import { senaiAppretice, senaiTechnician } from "@/constants/education/senai"
-import { VideoExperience, VideoFrame, Videos } from "@/components/video"
+import { VideoExperience, Videos } from "@/components/video"
 import { RadioButton } from "@/components/radion-button"
-import { BriefcaseBusiness, GraduationCap } from "lucide-react"
 
-type WorkExperience = {
+export type WorkExperience = {
   company: string
   position: string
   country: string
@@ -39,7 +37,7 @@ type WorkExperience = {
   videos?: VideoExperience[]
 }
 
-type EducationExperience = {
+export type EducationExperience = {
   institution: string
   course: string
   country: string
@@ -49,6 +47,11 @@ type EducationExperience = {
   logo?: string
   images?: ImageExperience[]
   videos?: VideoExperience[]
+}
+
+export type Experience = {
+  work?: WorkExperience
+  education?: EducationExperience
 }
 
 type FilterType = "work" | "education" | "both"
@@ -82,11 +85,11 @@ function CompanyHeader({
   country: string
 }) {
   return (
-    <div className="pt-2 md:p-0">
+    <div>
       <SubTitle className="font-normal">{title}</SubTitle>
-      <Paragraph className="tracking-widest p-0 dark:text-lighter text-sm">
+      <p className="tracking-widest p-0 text-gray-500 text-sm">
         {from} to {to} | {country}
-      </Paragraph>
+      </p>
     </div>
   )
 }
@@ -96,9 +99,11 @@ function Description({ description }: { description?: string[] }) {
 
   return (
     <div className="border-t-1 border-light py-4">
-      <Paragraph className="font-bold">Description:</Paragraph>
+      <p className="font-bold">Description:</p>
       {description.map((d, i) => (
-        <Paragraph key={i}>{d}</Paragraph>
+        <p key={i} className="text-justify">
+          {d}
+        </p>
       ))}
     </div>
   )
@@ -109,11 +114,11 @@ function Contributions({ contributions }: { contributions?: string[] }) {
 
   return (
     <div className="border-t-1 border-light py-4">
-      <Paragraph className="font-bold">Contributions & Learnings:</Paragraph>
+      <p className="font-bold">Contributions & Learnings:</p>
       <DiscList>
         {contributions.map((c, i) => (
           <DiscItem key={i}>
-            <Paragraph>{c}</Paragraph>
+            <p>{c}</p>
           </DiscItem>
         ))}
       </DiscList>
@@ -139,14 +144,9 @@ function WorkCard(work: WorkExperience) {
   return (
     <Card className="space-y-2 px-2 md:px-4 py-2">
       <div className="flex justify-between">
-        <div className="md:flex gap-4 items-center">
+        <div className="flex gap-4 items-center">
           {logo && <LogoLink logo={logo} alt={company} href={website} />}
-          <div className="flex items-center gap-2">
-            <BriefcaseBusiness
-              size={35}
-              strokeWidth={1}
-              className="text-medium-dark dark:text-lighter"
-            />
+          <div className="flex justify-between items-center gap-2">
             <CompanyHeader
               title={position}
               from={from}
@@ -185,14 +185,9 @@ function EducationCard(education: EducationExperience) {
   return (
     <Card className="space-y-2 px-2 md:px-4 py-2">
       <div className="flex justify-between">
-        <div className="md:flex gap-4 items-center">
+        <div className="flex gap-4 items-center">
           {logo && <LogoLink logo={logo} alt={institution} href={website} />}
-          <div className="flex gap-2 items-center">
-            <GraduationCap
-              size={35}
-              strokeWidth={1}
-              className="text-medium-dark dark:text-lighter"
-            />
+          <div className="flex justify-between items-center gap-2">
             <CompanyHeader
               title={course}
               from={from}
@@ -215,13 +210,7 @@ function EducationCard(education: EducationExperience) {
   )
 }
 
-function ExperienceCard({
-  work,
-  education,
-}: {
-  work?: WorkExperience
-  education?: EducationExperience
-}) {
+function ExperienceCard({ work, education }: Experience) {
   if (work) {
     return <WorkCard {...work} />
   }

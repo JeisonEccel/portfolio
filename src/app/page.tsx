@@ -1,24 +1,18 @@
-import { SectionDivider } from "@/components/section"
-import Introduction from "./(sections)/Introduction"
-import Skills from "./(sections)/Skill"
-import Projects from "./(sections)/Projects"
-import Experiences from "./(sections)/Experiences"
 import About from "./(sections)/About"
 import Contact from "./(sections)/Contact"
+import Experiences from "./(sections)/Experiences"
+import HomeSection from "./(sections)/Home"
+import Projects from "./(sections)/Projects"
+import Skills from "./(sections)/Skills"
 
 export default function Page() {
   return (
     <>
-      <Introduction />
-      <SectionDivider />
+      <HomeSection />
       <Skills />
-      <SectionDivider />
       <Projects />
-      <SectionDivider />
       <Experiences />
-      <SectionDivider />
       <About />
-      <SectionDivider />
       <Contact />
     </>
   )

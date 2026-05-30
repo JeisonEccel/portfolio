@@ -1,7 +1,6 @@
 "use client"
 
 import { Image } from "@/components/image"
-import { Paragraph } from "@/components/paragraph"
 import { Section } from "@/components/section"
 import { Title } from "@/components/title"
 import Link from "next/link"
@@ -23,18 +22,18 @@ export default function Contact() {
   return (
     <Section id="contact">
       <Title>Let&apos;s Chat!</Title>
-      <Paragraph>
+      <p>
         I&apos;d love to connect! Whether you&apos;re interested in
         collaborating on new opportunities, discussing my startup journey, or
         exploring how my skills can support your team, feel free to reach out.
-      </Paragraph>
-      <Paragraph>
+      </p>
+      <p>
         Email:{" "}
         <Link href="mailto:projetojeison@hotmail.com" className="font-bold">
           projetojeison@hotmail.com
         </Link>
-      </Paragraph>
-      <div className="flex gap-4">
+      </p>
+      <div className="flex gap-4 py-4">
         {links.map((link, index) => {
           return (
             <a
@@ -44,9 +43,9 @@ export default function Contact() {
               rel="noopener noreferrer"
             >
               <Image
-                src={`/icons/light/${link.icon}`}
+                src={`/icons/${link.icon}`}
                 alt={link.name}
-                className="w-8 h-8 dark:invert"
+                className="w-8 h-8 invert"
               />
             </a>
           )

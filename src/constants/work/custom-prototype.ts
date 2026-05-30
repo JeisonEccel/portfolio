@@ -1,4 +1,6 @@
-export const customPrototype = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const customPrototype: Experience = {
   work: {
     company: "Custom Prototypes",
     position: "Model Maker",

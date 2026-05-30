@@ -1,5 +1,3 @@
-import { Paragraph } from "./paragraph"
-
 export type VideoExperience = {
   src: string
   title: string
@@ -28,7 +26,7 @@ export function Videos({ videos }: { videos?: VideoExperience[] }) {
 
   return (
     <div className="border-t-1 border-light py-4">
-      <Paragraph className="font-bold">Videos:</Paragraph>
+      <p className="font-bold">Videos:</p>
       {videos.map((video, index) => (
         <VideoFrame key={index} video={video} />
       ))}

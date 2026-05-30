@@ -1,7 +1,9 @@
-export const nengatu = {
+import { Experience } from "@/app/(sections)/Experiences"
+
+export const nengatu: Experience = {
   work: {
     company: "Nengatu",
-    position: "Founder and CEO",
+    position: "Founder and Software Engineer",
     country: "Canada",
     website: "https://www.nengatu.com/",
     from: "11/2023",
@@ -34,8 +36,20 @@ export const nengatu = {
     ],
     videos: [
       {
-        src: "https://www.youtube.com/embed/Kznr1kgoRpw?si=0tIHPgoL92wXQtGz",
-        title: "Nengatu ERP Overview",
+        src: "https://www.youtube.com/embed/d0YIMyw_h8Y?si=_IYiZdwbv9aEYiBn",
+        title: "Overview",
+      },
+      {
+        src: "https://www.youtube.com/embed/cVhtyksOaos?si=N7RjGJEqiaEQAXLk",
+        title: "Custom Fields",
+      },
+      {
+        src: "https://www.youtube.com/embed/KoHf8U30Rpw?si=aI3C3EwuHuwL5rh8",
+        title: "Custom Views",
+      },
+      {
+        src: "https://www.youtube.com/embed/DEIiZDe0C3g?si=oqChaWd40nMGY-Go",
+        title: "Initial Setup",
       },
     ],
   },

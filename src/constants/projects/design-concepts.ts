@@ -1,6 +1,9 @@
-export const designConcepts = {
-  name: "Design Concepts",
+import { Project } from "@/app/(sections)/Projects"
+
+export const designConcepts: Project = {
+  name: "3D Design Concepts",
   type: "engineering",
+  cover: "/projects/concept-07.png",
   description: [
     "A series of conceptual design projects developed using SolidWorks, exploring a range of product ideas from mechanical and electrical devices to more organic, form-driven designs.",
     "This initiative focused on translating ideas into detailed 3D models, combining functionality with visual design. The work includes concept exploration, modeling, and presentation, with an emphasis on clearly communicating design intent through renders and visual storytelling.",
