@@ -1,4 +1,4 @@
-import { Project } from "@/app/(sections)/Projects"
+import { Project } from "@/types/projects"
 
 export const guitarPracticeV2: Project = {
   name: "Guitar Practice Tool (v2)",

@@ -19,37 +19,31 @@ export const pages: PageType[] = [
   {
     id: "home",
     name: "Home",
-    path: "",
+    path: "/",
     icon: Home,
-  },
-  {
-    id: "skills",
-    name: "Skills",
-    path: "skills",
-    icon: ChartBarBig,
   },
   {
     id: "projects",
     name: "Projects",
-    path: "projects",
+    path: "/projects",
     icon: FolderGit,
   },
   {
     id: "experiences",
     name: "Experiences",
-    path: "experiences",
+    path: "/experiences",
     icon: BriefcaseBusiness,
   },
   {
     id: "about",
     name: "About",
-    path: "about",
+    path: "/about",
     icon: UserSearch,
   },
   {
     id: "contact",
     name: "Contact",
-    path: "contact",
+    path: "/contact",
     icon: Mail,
   },
 ]
