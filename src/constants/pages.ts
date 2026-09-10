@@ -1,6 +1,5 @@
 import {
   BriefcaseBusiness,
-  ChartBarBig,
   FolderGit,
   Home,
   LucideIcon,
