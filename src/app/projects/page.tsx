@@ -11,17 +11,11 @@ import { Code, FolderGit, PencilRuler } from "lucide-react"
 import { personalWebsite } from "@/constants/projects/personal-website"
 import { Links } from "@/components/links"
 import { myFinancesBackend } from "@/constants/projects/my-finances-backend"
-import { guitarPracticeV1 } from "@/constants/projects/guitar-practice-v1"
-import { guitarPracticeV2 } from "@/constants/projects/guitar-practice-v2"
+import { praticaTool } from "@/constants/projects/pratica-tool"
 import { cn } from "@/lib/utils"
 import { Project } from "@/types/projects"
 
-const projectsList = [
-  guitarPracticeV2,
-  myFinancesBackend,
-  personalWebsite,
-  guitarPracticeV1,
-]
+const projectsList = [praticaTool, myFinancesBackend, personalWebsite]
 
 function ProjectCard(project: { invert: boolean } & Project) {
   const [expanded, setExpanded] = useState(false)
