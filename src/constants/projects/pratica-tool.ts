@@ -1,9 +1,9 @@
 import { Project } from "@/types/projects"
 
-export const guitarPracticeV2: Project = {
-  name: "Guitar Practice Tool (v2)",
+export const praticaTool: Project = {
+  name: "Pratica Tool",
   type: "software",
-  cover: "/projects/guitar-practice-v2.png",
+  cover: "/projects/pratica-tool.png",
   description: [
     "Interactive web-based guitar practice platform built with Next.js, TypeScript, and Tone.js, focused on real-time playback and structured musical representation.",
     "The application introduces a custom notation and timing system designed to model musical events using ticks-based scheduling, enabling precise playback control, loopable exercises, BPM adjustments, and multi-instrument support for guitar and bass. The project also includes a sampler-based audio architecture and structured playback engine for managing notation events, transport scheduling, and instrument execution.",
@@ -12,7 +12,7 @@ export const guitarPracticeV2: Project = {
   links: [
     {
       title: "Live Website",
-      href: "https://guitar-practice-v2.jeisoneccel.com/",
+      href: "https://pratica.music/",
     },
   ],
 }
