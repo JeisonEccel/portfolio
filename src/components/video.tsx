@@ -1,7 +1,4 @@
-export type VideoExperience = {
-  src: string
-  title: string
-}
+import { VideoExperience } from "@/types/resources"
 
 export function VideoFrame({ video }: { video: VideoExperience }) {
   const { src, title } = video

@@ -4,7 +4,7 @@ import Link from "next/link"
 function NavItem({ name, path }: { name: string; path: string }) {
   return (
     <li className="text-left">
-      <Link href={`/${path}`}>{name}</Link>
+      <Link href={path}>{name}</Link>
     </li>
   )
 }

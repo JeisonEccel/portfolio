@@ -7,12 +7,12 @@ import { pages } from "@/constants/pages"
 import { cn } from "@/lib/utils"
 
 function NavItem({
-  id,
+  path,
   name,
   icon,
   setNavbar,
 }: {
-  id: string
+  path: string
   name: string
   icon?: LucideIcon
   setNavbar: (a: boolean) => void
@@ -21,7 +21,7 @@ function NavItem({
   return (
     <li className="border-b-1 md:border-b-0 border-gray-400 text-left md:p-0 text-sm md:w-24">
       <Link
-        href={`#${id}`}
+        href={path}
         onClick={() => setNavbar(false)}
         className="flex flex-row md:flex-col md:justify-center items-center hover:text-black gap-4 md:gap-0 
         p-2 py-5 md:py-2 hover:bg-blue-100 md:rounded-lg"

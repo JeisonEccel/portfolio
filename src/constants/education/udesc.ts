@@ -1,4 +1,4 @@
-import { Experience } from "@/app/(sections)/Experiences"
+import { Experience } from "@/app/experiences/page"
 
 export const udesc: Experience = {
   education: {

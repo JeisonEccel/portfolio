@@ -97,7 +97,7 @@ function Skillset({ skillset }: { skillset: SkillSet }) {
   )
 }
 
-export default function Skills() {
+export default function SkillsSection() {
   return (
     <Section id="skills">
       <div className="flex items-center gap-4 pb-10">

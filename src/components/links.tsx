@@ -1,10 +1,5 @@
+import { LinkExperience } from "@/types/resources"
 import { ExternalLink } from "lucide-react"
-
-export type LinkExperience = {
-  href: string
-  title: string
-  icon?: string
-}
 
 export function LinkItem({ link }: { link: LinkExperience }) {
   const { href, title } = link
