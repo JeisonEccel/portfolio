@@ -1,4 +1,5 @@
 import {
+  BookText,
   BriefcaseBusiness,
   FolderGit,
   Home,
@@ -38,6 +39,12 @@ export const pages: PageType[] = [
     name: "About",
     path: "/about",
     icon: UserSearch,
+  },
+  {
+    id: "blog",
+    name: "Blog",
+    path: "/blog",
+    icon: BookText,
   },
   {
     id: "contact",

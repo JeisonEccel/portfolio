@@ -8,7 +8,7 @@ export const metadata = {
   description: "Portfolio of projects from Jeison Eccel",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
