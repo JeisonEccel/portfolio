@@ -11,15 +11,14 @@ export function Section({
   className?: string
 }) {
   return (
-    <section id={id}>
-      <div
-        className={cn(
-          "h-full mx-auto max-w-6xl pt-24 md:pb-24 md:pt-10 px-4",
-          className,
-        )}
-      >
-        {children}
-      </div>
+    <section
+      id={id}
+      className={cn(
+        "h-full mx-auto max-w-6xl pt-24 md:pb-24 md:pt-10 px-4",
+        className,
+      )}
+    >
+      {children}
     </section>
   )
 }

@@ -7,7 +7,7 @@ import { SubTitle, Title } from "@/components/title"
 import { Videos } from "@/components/video"
 import { useState } from "react"
 import { Image, Images } from "@/components/image"
-import { Code, FolderGit, PencilRuler } from "lucide-react"
+import { Code, PencilRuler } from "lucide-react"
 import { personalWebsite } from "@/constants/projects/personal-website"
 import { Links } from "@/components/links"
 import { myFinancesBackend } from "@/constants/projects/my-finances-backend"
@@ -72,10 +72,7 @@ function ProjectCard(project: { invert: boolean } & Project) {
 export default function Projects() {
   return (
     <Section id="projects">
-      <div className="flex items-center gap-4 pb-10">
-        <FolderGit size={48} />
-        <Title>Projects</Title>
-      </div>
+      <Title>Projects</Title>
       <p>
         These projects represent my personal initiatives and experiments outside
         of formal work or education. Each one reflects a problem I was curious
