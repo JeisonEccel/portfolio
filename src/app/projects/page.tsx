@@ -4,33 +4,18 @@ import { Card } from "@/components/cards"
 import { ExpandButton } from "@/components/buttons"
 import { Section } from "@/components/section"
 import { SubTitle, Title } from "@/components/title"
-import { VideoExperience, Videos } from "@/components/video"
+import { Videos } from "@/components/video"
 import { useState } from "react"
-import { Image, ImageExperience, Images } from "@/components/image"
-import { Code, FolderGit, PencilRuler } from "lucide-react"
+import { Image, Images } from "@/components/image"
+import { Code, PencilRuler } from "lucide-react"
 import { personalWebsite } from "@/constants/projects/personal-website"
-import { LinkExperience, Links } from "@/components/links"
+import { Links } from "@/components/links"
 import { myFinancesBackend } from "@/constants/projects/my-finances-backend"
-import { guitarPracticeV1 } from "@/constants/projects/guitar-practice-v1"
-import { guitarPracticeV2 } from "@/constants/projects/guitar-practice-v2"
+import { praticaTool } from "@/constants/projects/pratica-tool"
 import { cn } from "@/lib/utils"
+import { Project } from "@/types/projects"
 
-export type Project = {
-  name: string
-  type: string
-  cover?: string
-  description?: string[]
-  images?: ImageExperience[]
-  videos?: VideoExperience[]
-  links?: LinkExperience[]
-}
-
-const projectsList = [
-  guitarPracticeV2,
-  myFinancesBackend,
-  personalWebsite,
-  guitarPracticeV1,
-]
+const projectsList = [praticaTool, myFinancesBackend, personalWebsite]
 
 function ProjectCard(project: { invert: boolean } & Project) {
   const [expanded, setExpanded] = useState(false)
@@ -87,10 +72,7 @@ function ProjectCard(project: { invert: boolean } & Project) {
 export default function Projects() {
   return (
     <Section id="projects">
-      <div className="flex items-center gap-4 pb-10">
-        <FolderGit size={48} />
-        <Title>Projects</Title>
-      </div>
+      <Title>Projects</Title>
       <p>
         These projects represent my personal initiatives and experiments outside
         of formal work or education. Each one reflects a problem I was curious

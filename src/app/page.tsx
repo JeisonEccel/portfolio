@@ -1,19 +1,13 @@
-import About from "./(sections)/About"
-import Contact from "./(sections)/Contact"
-import Experiences from "./(sections)/Experiences"
+import ContactSection from "./(sections)/Contact"
 import HomeSection from "./(sections)/Home"
-import Projects from "./(sections)/Projects"
-import Skills from "./(sections)/Skills"
+import SkillsSection from "./(sections)/Skills"
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <HomeSection />
-      <Skills />
-      <Projects />
-      <Experiences />
-      <About />
-      <Contact />
+      <SkillsSection />
+      <ContactSection />
     </>
   )
 }

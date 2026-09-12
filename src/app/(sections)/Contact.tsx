@@ -18,7 +18,7 @@ const links = [
   },
 ]
 
-export default function Contact() {
+export default function ContactSection() {
   return (
     <Section id="contact">
       <Title>Let&apos;s Chat!</Title>

@@ -3,7 +3,8 @@
 import { createPortal } from "react-dom"
 import { useState, useCallback, useEffect } from "react"
 import { X, ChevronLeft, ChevronRight } from "lucide-react"
-import { Image, ImageExperience as ImageDetails } from "./image"
+import { Image } from "./image"
+import { ImageExperience } from "@/types/resources"
 import { cn } from "@/lib/utils"
 
 function GalleryGrid({
@@ -11,7 +12,7 @@ function GalleryGrid({
   path,
   setActiveIndex,
 }: {
-  images?: ImageDetails[]
+  images?: ImageExperience[]
   path: string
   setActiveIndex: (i: number) => void
 }) {
@@ -92,7 +93,7 @@ function ImageDisplay({
   activeIndex,
   setActiveIndex,
 }: {
-  images: ImageDetails[]
+  images: ImageExperience[]
   path: string
   activeIndex: number
   setActiveIndex: (i: number | null) => void
@@ -141,7 +142,7 @@ export function Gallery({
   images,
   path = "",
 }: {
-  images: ImageDetails[]
+  images: ImageExperience[]
   path?: string
 }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)

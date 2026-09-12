@@ -8,6 +8,10 @@ on:
     branches:
       - dev
 
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
 jobs:
   lint-and-build:
     runs-on: ubuntu-latest
@@ -27,6 +31,16 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Install Vercel CLI
+        run: pnpm add --global vercel
+
+      - name: Pull Vercel environment
+        run: >
+          vercel env pull .env.local
+          --environment=development
+          --yes
+          --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Run ESLint
         run: pnpm run lint

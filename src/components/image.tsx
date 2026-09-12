@@ -1,10 +1,6 @@
 import { CSSProperties } from "react"
 import { Gallery } from "./gallery"
-
-export type ImageExperience = {
-  file: string
-  alt: string
-}
+import { ImageExperience } from "@/types/resources"
 
 export function Image({
   src,

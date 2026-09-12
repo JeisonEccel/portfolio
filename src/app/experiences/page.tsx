@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Card } from "@/components/cards"
 import { ExpandButton } from "@/components/buttons"
-import { ImageExperience, Images, LogoLink } from "@/components/image"
+import { Images, LogoLink } from "@/components/image"
 import { Section } from "@/components/section"
 import { SubTitle, Title } from "@/components/title"
 import { DiscItem, DiscList } from "@/components/disc-list"
@@ -20,8 +20,9 @@ import { pafer } from "@/constants/work/pafer"
 import { centennial } from "@/constants/education/centennial"
 import { udesc } from "@/constants/education/udesc"
 import { senaiAppretice, senaiTechnician } from "@/constants/education/senai"
-import { VideoExperience, Videos } from "@/components/video"
+import { Videos } from "@/components/video"
 import { RadioButton } from "@/components/radion-button"
+import { ImageExperience, VideoExperience } from "@/types/resources"
 
 export type WorkExperience = {
   company: string
