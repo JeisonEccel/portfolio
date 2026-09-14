@@ -4,6 +4,8 @@ import { Post, PostMetadata } from "@/types/posts"
 
 const POST_FILENAME = "post.md"
 
+const includeUnpublished = process.env.NODE_ENV === "development"
+
 async function fetchMarkdown(url: string) {
   const response = await fetch(url)
 
@@ -12,6 +14,10 @@ async function fetchMarkdown(url: string) {
   }
 
   return response.text()
+}
+
+function isVisible(post: PostMetadata) {
+  return post.published || includeUnpublished
 }
 
 export async function getPosts(): Promise<PostMetadata[]> {
@@ -27,7 +33,7 @@ export async function getPosts(): Promise<PostMetadata[]> {
   )
 
   return posts
-    .filter((post) => post.published)
+    .filter(isVisible)
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
@@ -42,7 +48,7 @@ export async function getPost(slug: string): Promise<Post | undefined> {
 
     if (
       metadata.slug === slug &&
-      metadata.published &&
+      isVisible(metadata) &&
       blob.pathname === `${metadata.path}/${POST_FILENAME}`
     ) {
       return {
