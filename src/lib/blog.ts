@@ -4,7 +4,7 @@ import { Post, PostMetadata } from "@/types/posts"
 
 const POST_FILENAME = "post.md"
 
-const includeUnpublished = process.env.NODE_ENV === "development"
+const isDevelopment = process.env.NODE_ENV === "development"
 
 async function fetchMarkdown(url: string) {
   const response = await fetch(url)
@@ -17,7 +17,15 @@ async function fetchMarkdown(url: string) {
 }
 
 function isVisible(post: PostMetadata) {
-  return post.published || includeUnpublished
+  if (!post.published) {
+    return false
+  }
+
+  if (isDevelopment) {
+    return true
+  }
+
+  return new Date(post.date).getTime() <= Date.now()
 }
 
 export async function getPosts(): Promise<PostMetadata[]> {
