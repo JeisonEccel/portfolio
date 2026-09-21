@@ -8,10 +8,6 @@ on:
     branches:
       - dev
 
-env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
-
 jobs:
   lint-and-build:
     runs-on: ubuntu-latest
@@ -32,18 +28,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install Vercel CLI
-        run: pnpm add --global vercel
-
-      - name: Pull Vercel environment
-        run: >
-          vercel env pull .env.local
-          --environment=development
-          --yes
-          --token=${{ secrets.VERCEL_TOKEN }}
-
       - name: Run ESLint
         run: pnpm run lint
 
       - name: Build Next.js
         run: pnpm run build
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
+          R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
