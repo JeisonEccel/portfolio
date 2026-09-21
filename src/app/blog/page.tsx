@@ -2,7 +2,6 @@ import Link from "next/link"
 import { getPosts } from "@/lib/blog"
 import { Card } from "@/components/cards"
 import { Title } from "@/components/title"
-import { BookText } from "lucide-react"
 
 export const revalidate = 86400
 
