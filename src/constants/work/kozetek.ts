@@ -9,16 +9,26 @@ export const kozetek: Experience = {
     to: "03/2014",
     logo: "kozetek.jpg",
     description: [
-      "After my time at Boxcar, I joined Sergio Kozemekin in founding Kozetek, where his vision for innovative logistics solutions in the automotive sector became our main focus. This experience gave me exposure beyond design — I worked closely with vendors and customers, gaining valuable business and project management skills in addition to technical expertise.",
+      "At Kozetek, I worked closely with the company's founder on the development and commercialization of a modular material-handling system for the automotive industry. What began as an early product concept evolved through multiple prototypes and design iterations into a manufacturable system used to transport stamped body panels and interface with automated production lines.",
+
+      "My role extended beyond mechanical design into prototyping, manufacturing methods, cost analysis, suppliers, quality, and customer requirements. This gave me early experience working across the full product-development lifecycle, from concept and validation through industrialization and commercial delivery.",
     ],
     contributions: [
-      "Designed and patented an innovative modular column that enabled robots to load and unload stamped parts in automotive production lines.",
-      "Developed and maintained a project design library, increasing efficiency and eliminating duplicate work.",
-      "Planned and designed production tools, welding jigs, and assembly fixtures to support scalable manufacturing.",
-      "Established process standards, quality procedures, and supply chain management practices for the product line.",
-      "Reduced product costs by over 80% from initial concept to final production, achieving a competitive market price.",
-      "Built a cost simulation tool in Excel to streamline quoting and improve accuracy for new customer assemblies.",
-      "Expanded responsibilities beyond design, working directly with suppliers and customers to align products with real-world requirements.",
+      "Designed and developed a modular column system for automotive material-handling racks, enabling configurations to be adapted to different stamped parts and automated loading and unloading requirements.",
+
+      "Supported the product from early concepts through prototyping, testing, design iterations, and production, translating functional requirements into manufacturable components and assemblies.",
+
+      "Developed reusable CAD models, design libraries, and standardized components to accelerate new rack configurations and reduce duplicate engineering work.",
+
+      "Designed production tooling, welding jigs, and assembly fixtures to improve repeatability and support scalable manufacturing of the product.",
+
+      "Worked with suppliers and manufacturing partners to refine materials, components, fabrication processes, quality requirements, and sourcing as the product moved toward commercial production.",
+
+      "Reduced product cost by more than 80% from early prototypes to production through design simplification, standardization, supplier development, and manufacturing improvements.",
+
+      "Built an Excel-based cost simulation and quotation tool to configure assemblies, estimate costs, and improve the speed and consistency of customer quotations.",
+
+      "Worked directly with customers and suppliers to translate operational requirements into product changes and new configurations for automotive manufacturing applications.",
     ],
     images: [
       { file: "kozetek-01.png", alt: "Modular column project by Jeison" },

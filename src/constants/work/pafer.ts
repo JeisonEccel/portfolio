@@ -10,11 +10,11 @@ export const pafer: Experience = {
     website: "https://paferjoi.com.br/",
     logo: "pafer.webp",
     description: [
-      "My first professional experience, where I started as an intern during my last year of high school. The earnings from this role helped me fund my Technician course in Mechanical Projects, while this hardware store gave me daily exposure to tools, bolts, and materials.",
+      "My first professional experience began in 2005, during my final year of high school, working at a hardware and industrial supplies store. In 2006, I used the income from this job to help fund my Mechanical Projects Technician course, which marked the beginning of my technical career.",
     ],
     contributions: [
-      "Built deep familiarity with hardware, fasteners, and fabrication tools through hands-on work.",
-      "Developed practical knowledge that later made my Mechanical Design work more efficient and manufacturable.",
+      "Worked with inventory, customer orders, and a wide range of tools, fasteners, hardware, and industrial supplies.",
+      "Developed practical familiarity with components and materials that later complemented my technical education and mechanical design work.",
     ],
   },
 }

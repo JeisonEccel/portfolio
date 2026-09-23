@@ -19,7 +19,7 @@ import { domBosco } from "@/constants/work/dom-bosco"
 import { pafer } from "@/constants/work/pafer"
 import { centennial } from "@/constants/education/centennial"
 import { udesc } from "@/constants/education/udesc"
-import { senaiAppretice, senaiTechnician } from "@/constants/education/senai"
+import { senaiApprentice, senaiTechnician } from "@/constants/education/senai"
 import { Videos } from "@/components/video"
 import { RadioButton } from "@/components/radion-button"
 import { ImageExperience, VideoExperience } from "@/types/resources"
@@ -71,15 +71,17 @@ const experiences = [
   domBosco,
   senaiTechnician,
   pafer,
-  senaiAppretice,
+  senaiApprentice,
 ]
 
-function CompanyHeader({
+function ExperienceHeader({
+  organization,
   title,
   from,
   to,
   country,
 }: {
+  organization: string
   title: string
   from: string
   to: string
@@ -87,9 +89,10 @@ function CompanyHeader({
 }) {
   return (
     <div>
-      <SubTitle className="font-normal">{title}</SubTitle>
+      <SubTitle className="font-normal">{organization}</SubTitle>
+      <p>{title}</p>
       <p className="tracking-widest p-0 text-gray-500 text-sm">
-        {from} to {to} | {country}
+        {from} – {to} | {country}
       </p>
     </div>
   )
@@ -99,7 +102,7 @@ function Description({ description }: { description?: string[] }) {
   if (!description) return <></>
 
   return (
-    <div className="border-t-1 border-light py-4">
+    <div className="flex flex-col border-t-1 border-light py-4 space-y-4">
       <p className="font-bold">Description:</p>
       {description.map((d, i) => (
         <p key={i} className="text-justify">
@@ -114,12 +117,12 @@ function Contributions({ contributions }: { contributions?: string[] }) {
   if (!contributions) return <></>
 
   return (
-    <div className="border-t-1 border-light py-4">
-      <p className="font-bold">Contributions & Learnings:</p>
-      <DiscList>
+    <div className="flex flex-col border-t-1 border-light py-4 space-y-4">
+      <p className="font-bold">Key Contributions:</p>
+      <DiscList className="flex flex-col space-y-4">
         {contributions.map((c, i) => (
           <DiscItem key={i}>
-            <p>{c}</p>
+            <p className="text-justify">{c}</p>
           </DiscItem>
         ))}
       </DiscList>
@@ -148,7 +151,8 @@ function WorkCard(work: WorkExperience) {
         <div className="flex gap-4 items-center">
           {logo && <LogoLink logo={logo} alt={company} href={website} />}
           <div className="flex justify-between items-center gap-2">
-            <CompanyHeader
+            <ExperienceHeader
+              organization={company}
               title={position}
               from={from}
               to={to}
@@ -189,7 +193,8 @@ function EducationCard(education: EducationExperience) {
         <div className="flex gap-4 items-center">
           {logo && <LogoLink logo={logo} alt={institution} href={website} />}
           <div className="flex justify-between items-center gap-2">
-            <CompanyHeader
+            <ExperienceHeader
+              organization={institution}
               title={course}
               from={from}
               to={to}
@@ -255,7 +260,7 @@ function Filters({
 }
 
 export default function Experiences() {
-  const [filter, setFilter] = useState<FilterType>("both")
+  const [filter, setFilter] = useState<FilterType>("work")
 
   const filteredExperiences = experiences.filter((exp) => {
     if (filter === "both") return true
@@ -265,6 +270,11 @@ export default function Experiences() {
   return (
     <Section id="experiences">
       <Title>Career Journey</Title>
+      <p className="py-2">
+        My career has evolved across product development, engineering, project
+        leadership, and software development. Explore each experience for more
+        detail about the work, projects, and systems behind that journey.
+      </p>
       <Filters filter={filter} setFilter={setFilter} />
       <div className="flex flex-col gap-4">
         {filteredExperiences.map((experience, index) => (
