@@ -2,24 +2,33 @@ import { Experience } from "@/app/experiences/page"
 
 export const multicaseSystems: Experience = {
   work: {
-    company: "Multicase Systems Parana",
+    company: "Multicase Systems Paraná",
     position: "Engineering Manager",
     country: "Brazil",
     from: "09/2014",
     to: "07/2015",
     logo: "multicase-systems-parana.jpg",
     description: [
-      "After Kozetek, I joined Multicase Systems, a company specializing in automotive racks and a former partner of ours in prototype building. The company was facing a tough challenge after losing Renault/Nissan as a customer, and I worked alongside the leadership team to drive organizational improvements and prepare for a critical audit. This role allowed me to expand my impact beyond design, combining engineering expertise with strategic and operational leadership.",
+      "I joined Multicase Systems Paraná as Engineering Manager, leading engineering work for custom automotive material-handling projects serving manufacturers including Renault, Nissan, Volkswagen, Fiat, Hyundai, and BMW. The role combined project delivery, team leadership, product design, quoting, prototyping, and continuous improvement in a fast-moving manufacturing environment.",
+
+      "I managed more than 100 projects during the role, with approximately 75 active concurrently at peak periods. I also helped strengthen engineering and production processes as the company worked to meet customer requirements and restore its supplier status with Renault.",
     ],
     contributions: [
-      "Reduced average fabrication time of welding jigs from 5 days to 1 day by developing a new SolidWorks-based standard, increasing precision and reducing lead times.",
-      "Designed and delivered 50+ projects, including 3D models, 2D drawings, welding jigs, and technical instructions.",
-      "Managed over 100 projects, coordinating designers and prototype welders to meet deadlines and quality standards.",
-      "Created Excel-based checklists and procedures to monitor projects, reducing delays and improving production planning.",
-      "Recovered Renault/Nissan as a customer by implementing procedures, work instructions, and strategic plans aligned with their strict standards.",
-      "Cut quoting time from 4 hours to less than 30 minutes through an interactive Excel-based quoting sheet.",
-      "Led the implementation of 5S practices on the shop floor, improving organization and efficiency.",
-      "Planned and executed a facility layout modification that reduced material flow distances by up to 50%.",
+      "Managed more than 100 automotive projects from customer requirements through design, prototyping, validation, and delivery, coordinating priorities across engineering, purchasing, and prototype fabrication.",
+
+      "Expanded and managed the project team from two to four designers, alongside a purchaser and two prototype welders, assigning work, monitoring deadlines, and supporting technical decisions across concurrent projects.",
+
+      "Designed and delivered more than 50 projects directly, producing 3D models, manufacturing drawings, welding fixtures, and technical instructions for custom material-handling equipment.",
+
+      "Reduced average welding-jig fabrication time from approximately five days to one day by developing standardized SolidWorks-based designs that improved repeatability and simplified fabrication.",
+
+      "Reduced quotation preparation time from approximately four hours to 30 minutes by developing an Excel-based estimating tool that standardized calculations and accelerated project costing.",
+
+      "Developed project checklists, procedures, and planning tools to improve visibility across concurrent work, identify delays, and coordinate engineering and prototype activities.",
+
+      "Helped restore Renault supplier status by implementing engineering procedures, work instructions, project controls, and corrective actions required to address audit and process expectations.",
+
+      "Led shop-floor improvement initiatives including 5S and facility-layout changes, reducing material movement and improving organization around prototype and production activities.",
     ],
   },
 }

@@ -15,6 +15,7 @@ export default function HomeSection() {
               scalable, reliable software.
             </p>
           </div>
+
           <Image
             src="/images/home.jpg"
             alt="Jeison Eccel"
@@ -23,22 +24,26 @@ export default function HomeSection() {
           />
         </div>
       </div>
+
       <div>
         <div className="grid md:grid-cols-3 gap-4">
           <Card className="p-4">
-            <SubTitle>15+ Years Experience</SubTitle>
-            <p className="text-gray-500">Engineering & Software Development</p>
+            <SubTitle>Software Development</SubTitle>
+            <p className="text-gray-500">Full-Stack, APIs & Cloud</p>
           </Card>
+
           <Card className="p-4">
-            <SubTitle>Enterprise ERP Architect</SubTitle>
-            <p className="text-gray-500">Designed & Built End-to-End</p>
+            <SubTitle>Technical Leadership</SubTitle>
+            <p className="text-gray-500">Projects, Teams & Delivery</p>
           </Card>
+
           <Card className="p-4">
-            <SubTitle>Full-Stack + Cloud</SubTitle>
-            <p className="text-gray-500">Backend, Frontend & Infrastructure</p>
+            <SubTitle>Product Development</SubTitle>
+            <p className="text-gray-500">Requirements to Real-World Use</p>
           </Card>
         </div>
       </div>
+
       <div className="md:pt-24">
         <div className="grid grid-cols-1 md:grid-cols-[240_1fr] lg:grid-cols-[480_1fr] gap-6">
           <Image
@@ -47,26 +52,28 @@ export default function HomeSection() {
             className="w-full md:w-120 max-h-120 md:max-h-80 mx-auto lg:mx-0 rounded-xl shadow-lg shadow-gray-600"
             style={{ height: "100%", objectFit: "cover" }}
           />
+
           <div className="md:text-base md:py-0 text-justify space-y-4">
             <p>
-              With a background spanning 15+ years in production engineering and
-              software development, I specialize in translating real-world
-              workflows into modern platforms, combining system architecture,
-              cloud infrastructure, and product thinking.
+              My background spans 15+ years across product development,
+              engineering, manufacturing, project leadership, and software
+              development. That experience gives me a practical perspective on
+              both how systems are built and the real-world problems they need
+              to solve.
             </p>
+
             <p>
-              My work focuses on areas such as multi-tenant SaaS systems,
-              backend services, and developer platforms, where performance,
-              scalability, and usability are critical. I’ve built end-to-end
-              solutions integrating business operations, data systems, and
-              user-facing applications, bridging the gap between engineering
-              environments and software systems.
+              Today, I work hands-on across software architecture, backend and
+              frontend development, databases, cloud infrastructure, and
+              deployment. I’ve taken products from early requirements and system
+              design through implementation, release, and user adoption, while
+              also leading technical projects and development work.
             </p>
+
             <p>
-              This site showcases selected projects and experiences across
-              software, systems design, and operations, highlighting how
-              practical engineering knowledge can be applied to build better,
-              more intuitive technology.
+              This site brings together selected projects and experiences from
+              that journey—from physical products and manufacturing systems to
+              ERP platforms and modern web applications.
             </p>
           </div>
         </div>

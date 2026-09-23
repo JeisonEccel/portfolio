@@ -10,18 +10,28 @@ export const nengatu: Experience = {
     to: "Present",
     logo: "nengatu.png",
     description: [
-      "As the founder and CEO of Nengatu, I lead the development and growth of an ERP system tailored for small and medium-sized manufacturers. Bootstrapping the company from scratch, I face the full spectrum of startup challenges — from coding and deploying the platform to managing operations, finances, legal responsibilities, and customer acquisition.",
+      "I founded Nengatu to build a modern ERP platform for small and mid-sized manufacturers, drawing on my previous experience developing internal ERP systems and working directly with manufacturing operations. I have taken the product from initial requirements and architecture through implementation, deployment, customer demonstrations, and onboarding.",
+
+      "As the primary software developer and product owner, I work across backend and frontend development, system architecture, cloud infrastructure, product planning, and release management. The platform now covers 9 interconnected modules spanning product development, CRM, quoting, sales, procurement, production, inventory, logistics, and user management.",
     ],
     contributions: [
-      "Designed and built the platform end-to-end: backend in Java with Spring Boot 3, a desktop application in JavaFX, and a client-facing portal in Next.js.",
-      "Implemented DevOps practices and CI/CD pipelines using AWS, GitHub Actions, and Terraform.",
-      "Allocated limited resources strategically, balancing development, marketing, sales, and early hiring.",
-      "Recruited and managed a junior software developer under contract to accelerate initial development.",
-      "Developed early customer acquisition strategies, engaging directly with clients to validate product-market fit.",
-      "Handled legal, accounting, and compliance responsibilities to establish and operate the business independently.",
-      "Planned and executed strategic growth initiatives, including partnerships, networking, and sales outreach.",
-      "Managed operational challenges, multitasking across technical, business, and strategic functions while maintaining progress under limited resources.",
-      "Learned to prioritize effectively, make high-stakes decisions with incomplete information, and iterate the product based on feedback.",
+      "Designed the platform architecture from the ground up, including service boundaries, relational data models, multi-tenant data isolation, authentication and session flows, frontend applications, and cloud infrastructure.",
+
+      "Developed Java and Spring Boot backend services with REST APIs, JPA, PostgreSQL, and Redis, along with a JavaFX desktop ERP and Next.js applications for account management and customer-facing workflows.",
+
+      "Designed and deployed a regional architecture with centralized account services in Canada and customer-facing API deployments in Canada and Brazil, routing organizations to their configured region while maintaining a shared application codebase.",
+
+      "Built and maintained AWS infrastructure using Terraform and GitHub Actions, automating testing and application deployments across regional environments and establishing backend testing practices resulting in more than 6,000 unit tests in the customer-facing API.",
+
+      "Built the product from early database and interface concepts through a production release with self-service registration, free-trial activation, authentication, organization setup, and ERP distribution for Windows and macOS.",
+
+      "Defined the initial product roadmap from previous ERP and manufacturing experience, then reprioritized features based on customer demonstrations, user feedback, sales-partner input, implementation complexity, and expected product value.",
+
+      "Managed development and releases using GitHub Kanban, issues, priorities, milestones, pull-request standards, testing requirements, and CI/CD workflows to coordinate features, defects, technical work, and deployments.",
+
+      "Recruited and managed a junior software developer during the first year of development, defining tasks and priorities, reviewing pull requests, providing technical guidance, and retaining responsibility for architecture and complex implementation work.",
+
+      "Led product demonstrations, sales-partner training, and customer onboarding, using feedback from prospective and active users to identify workflow gaps and refine product priorities.",
     ],
     images: [
       { file: "nengatu-erp-01.png", alt: "Nengatu login screen" },

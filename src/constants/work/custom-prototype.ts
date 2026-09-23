@@ -10,12 +10,12 @@ export const customPrototype: Experience = {
     to: "04/2017",
     logo: "custom-prototypes.svg",
     description: [
-      "While studying Project Management in Canada, I worked part-time with Custom Prototype, a company focused on 3D-printed and one-off prototypes. This role gave me hands-on exposure to rapid prototyping and additive manufacturing technologies.",
+      "While completing my Project Management studies in Canada, I worked part-time at Custom Prototypes, supporting the development of one-off prototypes and 3D-printed parts. The role combined CAD design with hands-on model making and additive manufacturing.",
     ],
     contributions: [
-      "Created product and assembly designs using SolidWorks.",
-      "Supported 3D printing workflows, including scanning, cleaning, and preparing SLA parts.",
-      "Gained practical experience in bridging design concepts with physical prototypes.",
+      "Created and modified product and assembly designs in SolidWorks for prototyping and fabrication.",
+      "Supported additive manufacturing workflows including 3D scanning, part preparation, cleaning, and finishing of SLA-printed components.",
+      "Worked directly with physical prototypes, translating digital designs into manufactured parts and assemblies.",
     ],
     images: [
       { file: "custom-prototype-01.png", alt: "Aeromodel designed by Jeison" },

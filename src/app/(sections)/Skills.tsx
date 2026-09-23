@@ -2,8 +2,8 @@ import { Card } from "@/components/cards"
 import { Section } from "@/components/section"
 import { SubTitle, Title } from "@/components/title"
 import { systemsEngineering } from "@/constants/skills/systems-engineering"
-import { operationsSystems } from "@/constants/skills/operations-systems"
-import { productStrategy } from "@/constants/skills/product-strategy"
+import { technicalLeadership } from "@/constants/skills/technical-leadership"
+import { productOperations } from "@/constants/skills/product-operations"
 import { ChartBarBig } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -28,7 +28,7 @@ export type SkillSet = {
   groups: SkillGroup[]
 }
 
-const skillsets = [systemsEngineering, operationsSystems, productStrategy]
+const skillsets = [systemsEngineering, technicalLeadership, productOperations]
 
 function SkillProgress({
   name,
@@ -106,14 +106,14 @@ export default function SkillsSection() {
       </div>
       <div className="text-justify space-y-4">
         <p>
-          These skills reflect the tools and capabilities I use to design,
-          build, and scale software systems.
+          My experience combines software engineering, technical leadership,
+          product development, and operational systems—disciplines that have
+          often overlapped throughout my career.
         </p>
         <p>
-          They are grouped by area to highlight how different disciplines come
-          together in real-world applications. Proficiency is rated from 1 to 5,
-          where 1 indicates foundational knowledge and 5 represents extensive
-          hands-on experience applying the skill in production environments.
+          Skills are grouped by area and rated from 1 to 5 based on my relative
+          depth of hands-on experience, from foundational knowledge to areas I
+          have applied extensively across multiple projects and roles.
         </p>
       </div>
 

@@ -8,14 +8,14 @@ import { Videos } from "@/components/video"
 import { useState } from "react"
 import { Image, Images } from "@/components/image"
 import { Code, PencilRuler } from "lucide-react"
-import { personalWebsite } from "@/constants/projects/personal-website"
 import { Links } from "@/components/links"
-import { myFinancesBackend } from "@/constants/projects/my-finances-backend"
 import { praticaTool } from "@/constants/projects/pratica-tool"
+import { myFinancesApi } from "@/constants/projects/my-finances-api"
+import { personalWebsite } from "@/constants/projects/personal-website"
 import { cn } from "@/lib/utils"
 import { Project } from "@/types/projects"
 
-const projectsList = [praticaTool, myFinancesBackend, personalWebsite]
+const projectsList = [praticaTool, myFinancesApi, personalWebsite]
 
 function ProjectCard(project: { invert: boolean } & Project) {
   const [expanded, setExpanded] = useState(false)
@@ -74,12 +74,11 @@ export default function Projects() {
     <Section id="projects">
       <Title>Projects</Title>
       <p>
-        These projects represent my personal initiatives and experiments outside
-        of formal work or education. Each one reflects a problem I was curious
-        about, a skill I wanted to master, or an idea I wanted to bring to life.
-        From software applications to engineering experiments, these projects
-        showcase my creativity, technical abilities, and passion for building
-        things that matter.
+        These projects are personal initiatives where I explore ideas, solve
+        practical problems, and experiment with technologies outside of my
+        professional work. They give me the freedom to make the architectural
+        and product decisions myself—from defining the problem and designing the
+        system to implementation, testing, and deployment.
       </p>
       <div className="flex flex-col gap-4 py-4">
         {projectsList.map((project, index) => (
