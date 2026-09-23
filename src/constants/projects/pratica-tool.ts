@@ -5,9 +5,13 @@ export const praticaTool: Project = {
   type: "software",
   cover: "/projects/pratica-tool.png",
   description: [
-    "Interactive web-based guitar practice platform built with Next.js, TypeScript, and Tone.js, focused on real-time playback and structured musical representation.",
-    "The application introduces a custom notation and timing system designed to model musical events using ticks-based scheduling, enabling precise playback control, loopable exercises, BPM adjustments, and multi-instrument support for guitar and bass. The project also includes a sampler-based audio architecture and structured playback engine for managing notation events, transport scheduling, and instrument execution.",
-    "Developed as an evolution of the original Guitar Practice project, this version reflects a transition from visualization-focused tooling toward more advanced application architecture, audio synchronization, and reusable musical data modeling. The project explores challenges related to real-time systems, state management, and scalable frontend application structure within modern web technologies.",
+    "Interactive guitar, bass, and ukulele practice platform built with Next.js, TypeScript, Tone.js, Drizzle, and PostgreSQL and deployed on Vercel. Users can configure their instrument, tuning, strings, and fret range, then generate exercises with synchronized notation, tablature, fretboard visualization, and audio playback.",
+
+    "Exercises are generated algorithmically rather than stored as predefined sequences. Based on the selected instrument and practice settings, the application calculates pitches and fretboard positions, builds the exercise sequence, translates it into musical notation, and schedules playback using a custom tick-based timing model. Changes to the instrument or tuning automatically recalculate the exercise for the new configuration.",
+
+    "I built the notation system from scratch, including custom SVG musical symbols and a responsive renderer that translates generated note sequences into staff, tablature, and fretboard views. Each representation can be displayed independently or combined, adapting the score layout across desktop and mobile screens.",
+
+    "A custom playback engine synchronizes the generated notation with sampler-based audio, a visual indicator for the current note, and automatic scrolling through the score. The application also includes authentication and persisted instrument settings, allowing returning users to continue with their preferred instrument configuration.",
   ],
   links: [
     {

@@ -10,23 +10,30 @@ export const jvcPrecision: Experience = {
     to: "04/2021",
     logo: "jvc-precision.png",
     description: [
-      "I joined JVC Precision as a Mechanical Designer and quickly progressed to Senior Designer and then Design & Engineering Manager. Over nearly four years, I combined engineering, process improvement, and leadership to deliver innovative designs, streamline operations, and support the company’s strategic growth — from developing an ERP system to supporting ISO 9001 implementation.",
+      "I joined JVC Precision as a Mechanical Designer, progressed to Senior Mechanical Designer, and later became Design & Engineering Manager. Working in a custom manufacturing environment, I led engineering work from customer requirements and concept development through detailed design, production support, and delivery while managing a team of two designers.",
+
+      "The role also became an important bridge between my engineering and software careers. To address operational problems I was seeing across the business, I designed and developed an internal ERP system that connected engineering with sales, procurement, production, inventory, shipping, and quality workflows. This experience became a major foundation for the manufacturing systems I later built at Nengatu.",
     ],
     contributions: [
-      "Designed an innovative modular enclosure for mining vehicles, boosting company profitability by 17% and becoming the most successful project in the company’s history.",
-      "Reduced design development time by up to 90% by defining engineering standards, naming conventions, and project libraries.",
-      "Delivered multiple mining vehicles using modular design, enabling production without large-scale lifting equipment and leading to hundreds of units built.",
-      "Designed additional products such as cabinets, kiosks, and custom equipment on demand.",
-      "Developed a fully customized ERP system (Microsoft Access + SQL Server), integrating sales, engineering, production, procurement, shipping, and quality control.",
-      "Expanded ERP functionalities with MRP planning, purchasing, reporting, and shop-floor time tracking.",
-      "Improved manufacturing planning and on-time delivery by enhancing ERP scheduling capabilities.",
-      "Reduced WIP volume by 30% through a 3D-modeled layout analysis and systematic planning.",
-      "Implemented 5S across the shop floor with direct involvement in defining and standardizing practices.",
-      "Led a facility-wide layout transformation, improving material flow and production efficiency.",
-      "Supported equipment acquisitions (robotic welder, tapping arm, crane, saw) by preparing layouts and defining technical specs.",
-      "Played a key role in ISO 9001 certification by preparing ~70% of the required documentation and supporting quality processes.",
-      "Created training materials and standards to onboard and engage new employees.",
-      "Supported strategic decision-making with a simulation tool that analyzed process bottlenecks and forecasted revenue based on historical data.",
+      "Designed and helped bring to production a modular enclosure system for underground mining vehicles, developing a configurable product architecture that could support multiple vehicle requirements while simplifying manufacturing and assembly.",
+
+      "Established engineering standards, reusable design libraries, naming conventions, and standardized components that significantly reduced development time for repeat and derivative projects.",
+
+      "Led engineering for custom products including mining vehicle enclosures, cabinets, kiosks, and industrial equipment, coordinating requirements, design decisions, manufacturing constraints, and production support.",
+
+      "Designed and developed a custom ERP system using Microsoft Access and SQL Server, integrating workflows across sales, engineering, production, procurement, inventory, shipping, and quality.",
+
+      "Expanded the ERP with production planning, purchasing, reporting, barcode-based shop-floor tracking, quality workflows, and other operational tools, progressively replacing disconnected spreadsheets and manual processes.",
+
+      "Reduced final work-order preparation from approximately one week to about five minutes by connecting engineering and operational data and automating the generation of production information.",
+
+      "Developed planning and simulation tools using historical production data to identify capacity constraints, evaluate process bottlenecks, and support production and revenue planning.",
+
+      "Led manufacturing improvement initiatives including 5S implementation, facility layout redesign, material-flow analysis, and equipment planning, using 3D models and production data to evaluate changes before implementation.",
+
+      "Supported the selection and implementation of manufacturing equipment including robotic welding, material handling, tapping, and cutting equipment by defining requirements and incorporating the equipment into production layouts and workflows.",
+
+      "Contributed extensively to the company's ISO 9001 implementation by developing quality documentation, procedures, training material, and supporting processes used across engineering and manufacturing.",
     ],
     images: [
       {

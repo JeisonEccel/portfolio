@@ -9,10 +9,10 @@ const links = [
   {
     name: "LinkedIn",
     icon: "linkedin.svg",
-    href: "https://www.linkedin.com/in/jeisonreccel",
+    href: "https://www.linkedin.com/in/jeisoneccel",
   },
   {
-    name: "Github",
+    name: "GitHub",
     icon: "github.svg",
     href: "https://github.com/JeisonEccel",
   },
@@ -21,18 +21,22 @@ const links = [
 export default function ContactSection() {
   return (
     <Section id="contact">
-      <Title>Let&apos;s Chat!</Title>
+      <Title>Let&apos;s Connect</Title>
+
       <p>
-        I&apos;d love to connect! Whether you&apos;re interested in
-        collaborating on new opportunities, discussing my startup journey, or
-        exploring how my skills can support your team, feel free to reach out.
+        I&apos;m always happy to connect with people working on interesting
+        products, technical challenges, or new ideas. Whether you&apos;d like to
+        discuss software, product development, one of my projects, or a
+        potential opportunity, feel free to reach out.
       </p>
+
       <p>
         Email:{" "}
-        <Link href="mailto:projetojeison@hotmail.com" className="font-bold">
-          projetojeison@hotmail.com
+        <Link href="mailto:jeisoneccel@gmail.com" className="font-bold">
+          jeisoneccel@gmail.com
         </Link>
       </p>
+
       <div className="flex gap-4 py-4">
         {links.map((link, index) => {
           return (

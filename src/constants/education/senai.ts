@@ -3,7 +3,7 @@ import { Experience } from "@/app/experiences/page"
 export const senaiTechnician: Experience = {
   education: {
     institution: "SENAI",
-    course: "Technician, Mechanical Design",
+    course: "Mechanical Projects Technician",
     country: "Brazil",
     from: "01/2006",
     to: "12/2007",
@@ -15,10 +15,10 @@ export const senaiTechnician: Experience = {
   },
 }
 
-export const senaiAppretice: Experience = {
+export const senaiApprentice: Experience = {
   education: {
     institution: "SENAI",
-    course: "Apprenticeship, Machining",
+    course: "Machining Apprenticeship",
     country: "Brazil",
     from: "07/2004",
     to: "06/2005",
