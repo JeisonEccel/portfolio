@@ -5,6 +5,7 @@ import { X, Menu, LucideIcon } from "lucide-react"
 import Link from "next/link"
 import { pages } from "@/constants/pages"
 import { cn } from "@/lib/utils"
+import { Footer } from "./footer"
 
 function NavItem({
   path,
@@ -47,21 +48,20 @@ export function Navigation({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState(false)
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <div className="fixed md:hidden bg-white text-gray-700 top-0 left-0 right-0 z-60">
         <div className="flex justify-between items-center h-20 p-4">
           <p className="text-2xl font-bitter">Jeison Eccel</p>
-          <div className="md:hidden">
-            <button onClick={() => setShow(!show)}>
-              {show ? <X size={36} /> : <Menu size={36} />}
-            </button>
-          </div>
+
+          <button onClick={() => setShow(!show)}>
+            {show ? <X size={36} /> : <Menu size={36} />}
+          </button>
         </div>
       </div>
 
       {show && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden mt-20"
+          className="fixed inset-0 bg-black/50 z-40 md:hidden"
           onClick={() => setShow(false)}
         />
       )}
@@ -69,7 +69,7 @@ export function Navigation({ children }: { children: React.ReactNode }) {
       <nav
         className={cn(
           "fixed md:static z-50",
-          "md:inset-y-0 left-0 right-0 md:left-auto md:right-auto md:w-auto",
+          "left-0 right-0 md:left-auto md:right-auto md:w-auto",
           "top-20 md:top-auto",
           "flex flex-col md:flex-row bg-white text-gray-700",
           "transition-transform duration-200 md:duration-0 md:transition-none",
@@ -89,7 +89,10 @@ export function Navigation({ children }: { children: React.ReactNode }) {
         </div>
       </nav>
 
-      <div className="flex-1 h-screen overflow-auto">{children}</div>
-    </>
+      <main className="fixed inset-x-0 top-20 bottom-0 flex flex-col overflow-y-auto md:static md:flex-1 md:overflow-visible">
+        <div className="flex-1">{children}</div>
+        <Footer />
+      </main>
+    </div>
   )
 }

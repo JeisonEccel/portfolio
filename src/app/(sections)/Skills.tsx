@@ -117,7 +117,7 @@ export default function SkillsSection() {
         </p>
       </div>
 
-      <div className="flex flex-col md:grid-cols-2 gap-5">
+      <div className="flex flex-col gap-5">
         {skillsets.map((skillset, index) => {
           return <Skillset key={index} skillset={skillset} />
         })}
